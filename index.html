@@ -10,19 +10,17 @@
 </head>
 <body class="bg-slate-100 min-h-screen flex items-center justify-center p-4">
   <main class="w-full max-w-3xl">
-    <h1 class="text-3xl md:text-4xl font-bold text-slate-900 text-center mb-6">
-      의약품 정보 검색 서비스 사용성 평가 연구
-    </h1>
+    <h1 class="text-3xl md:text-4xl font-bold text-slate-900 text-center mb-6">의약품 정보 검색 서비스 사용성 평가 연구</h1>
+
     <section class="bg-white rounded-2xl shadow-xl ring-1 ring-black/5 p-6 md:p-10">
       <div class="flex items-start gap-4">
-        <div class="shrink-0 w-12 h-12 rounded-full bg-slate-200 flex items-center justify-center">
-          <span class="text-slate-500 text-xl">●</span>
-        </div>
+        <div class="shrink-0 w-12 h-12 rounded-full bg-slate-200 flex items-center justify-center"><span class="text-slate-500 text-xl">●</span></div>
         <div>
           <h2 class="text-xl md:text-2xl font-bold text-slate-900">연구 참여 안내</h2>
           <p class="text-slate-500 mt-1">연구에 참여해주셔서 감사합니다.</p>
         </div>
       </div>
+
       <div class="mt-6 bg-slate-50 border border-slate-200 rounded-xl p-5 leading-7 text-slate-700">
         <ul class="list-disc pl-5 space-y-1">
           <li><b>예상 소요 시간</b>: 5–10분</li>
@@ -31,17 +29,30 @@
           <li><b>개인정보 보존</b>: 수집 정보는 연구 목적 외 사용하지 않음</li>
         </ul>
       </div>
+
+      <!-- 연구자/연락처 -->
+      <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="bg-indigo-50 rounded-xl p-5">
+          <div class="text-slate-500 text-sm mb-1">연구자</div>
+          <div class="text-slate-900 font-semibold text-lg">김태영</div>
+        </div>
+        <div class="bg-slate-50 rounded-xl p-5">
+          <div class="text-slate-500 text-sm mb-1">연락처</div>
+          <div class="space-y-1">
+            <div>이메일: <a href="mailto:kty20@daum.net" class="text-indigo-600 hover:underline">kty20@daum.net</a></div>
+            <div>전화: <a href="tel:01024653348" class="text-indigo-600 hover:underline">010-2465-3348</a></div>
+          </div>
+        </div>
+      </div>
+
       <div class="mt-8 flex flex-col sm:flex-row items-center gap-4">
-        <a href="./prototype.html"
-           class="inline-flex items-center justify-center px-5 py-3 rounded-xl bg-indigo-600 text-white font-medium shadow hover:bg-indigo-700 transition">
-          프로토타입 테스트 시작하기
-        </a>
+        <!-- 중요: 실제 링크 -->
+        <a href="prototype.html" class="inline-flex items-center justify-center px-5 py-3 rounded-xl bg-indigo-600 text-white font-medium shadow hover:bg-indigo-700 transition">프로토타입 테스트 시작하기</a>
         <span class="text-slate-400 text-sm sm:ml-auto">* 실험은 프로토타입에서 진행됩니다.</span>
       </div>
     </section>
-    <footer class="text-center text-slate-400 text-sm mt-6">
-      © 연구2 — 의약품 정보 검색 서비스 프로토타입
-    </footer>
+
+    <footer class="text-center text-slate-400 text-sm mt-6">© 연구2 — 의약품 정보 검색 서비스 프로토타입</footer>
   </main>
 </body>
 </html>
