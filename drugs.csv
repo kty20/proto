@@ -1,101 +1,151 @@
 ﻿ITEM_SEQ,DRUG_NAME,COMPANY,CLASS_NAME,ETC_OTC_NAME,FORM_CODE,DRUG_SHAPE,COLOR_CLASS1,PRINT_FRONT,PRINT_BACK,MARK_CODE,CHART,IMAGE_URL,EE_DOC,UD_DOC,NB_DOC
-200202184,디스톤골드연질캡슐,한미약품(주),혼합비타민제(비타민AD 혼합제제를 제외),OTC,"연질캡슐제, 현탁상",장방형,갈색,FT-CRE,,,황갈색의 내용물이 든 적갈색의 장방형의 연질캅셀제,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/154661648918900100,,,
-200202185,콘로친300연질캡슐,한미약품(주),혼합비타민제(비타민AD 혼합제제를 제외),OTC,"연질캡슐제, 현탁상",장방형,갈색,FT-C300,,,황갈색의 내용물이 든 적갈색의 장방형 연질캅셀제,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/154661648918900094,,,
-200403661,에너지톤연질캡슐,(주)알피바이오,기타의 비타민제,OTC,"연질캡슐제, 현탁상",장방형,갈색,RPENT,,,황색의 내용물이 든 암갈색의 장방형 연질캡슐,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426395116500043,,,
-200701086,스프라이셀정50밀리그램(다사티닙),(유)한국비엠에스제약,항악성종양제,ETC,필름코팅정,타원형,하양,BMS,528,,"흰색 내지 회백색의 양면이 볼록하고 타원형이며, 한쪽면에는 'BMS' 다른쪽면에는 ‘528’이 각인되어 있는 필름코팅정",https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426395116500035,,,
-200704968,토핀정25밀리그램(토피라메이트),대한뉴팜(주),항전간제,ETC,필름코팅정,원형,하양,마크분할선N,25,,흰색의 원형 필름코팅정,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426395116500049,,,
-200808876,가스디알정50밀리그램(디메크로틴산마그네슘),일동제약(주),기타의 소화기관용약,ETC,당의정,원형,연두,IDG,,,녹색의 원형 필름코팅정,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426403087300104,,,
-200808877,페라트라정2.5밀리그램(레트로졸),(주)유한양행,항악성종양제,ETC,필름코팅정,원형,노랑,YH,LT,,어두운 황색의 원형 필름코팅정,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426403087300107,,,
-200808948,졸뎀속붕정(졸피뎀타르타르산염),보령제약(주),최면진정제,ETC,정제,원형,하양,,,,흰색의 원형 구강붕해정제,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426403087300128,,,
-200809076,가스프렌정(모사프리드시트르산염이수화물),경동제약(주),기타의 소화기관용약,ETC,필름코팅정,장방형,하양,KD,분할선,,분할선을 가진 흰색의 장방형 필름코팅정제,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426403087300143,,,
-200809361,바르탄정(발사르탄),(주)휴온스,혈압강하제,ETC,필름코팅정,원형,분홍,V분할선T,HS8,,엷은 적색의 원형 필름코팅정,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426403087300155,,,
-200809402,리피논정80밀리그램(아토르바스타틴칼슘삼수화물),동아에스티(주),동맥경화용제,ETC,필름코팅정,타원형,하양,LPT,80,,이 약은 흰색의 타원형 필름코팅정이다.,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426403087300161,,,
-200809710,사르발탄정160밀리그램(발사르탄),(주)서울제약,혈압강하제,ETC,필름코팅정,타원형,주황,SPC,V분할선16,,회색빛을 띠는 오렌지색의 타원형 필름코팅정,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/153432591328100009,,,
-200809882,가스베트정5밀리그램(모사프리드시트르산염수화물),일동제약(주),기타의 소화기관용약,ETC,필름코팅정,장방형,하양,ID·5,분할선,,흰색의 장방형 필름코팅정,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/154333330132500103,,,
-200809883,아푸르탄정150밀리그램(이르베사르탄),동아에스티(주),혈압강하제,ETC,필름코팅정,타원형,하양,AT,150,,흰색 또는 거의 흰색의 양쪽이 볼록한 타원형 필름코팅정제,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426403087300198,,,
-200809909,발사르텔정80밀리그램(발사르탄),주식회사제뉴원사이언스,혈압강하제,ETC,필름코팅정,원형,분홍,V분할선8,KK,,분홍색의 원형 필름코팅정,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/1OCNrLiTjPI,,,
-200809910,발사르텔정160밀리그램(발사르탄),주식회사제뉴원사이언스,혈압강하제,ETC,필름코팅정,타원형,주황,V분할선16,KK,,회색빛을 띠는 오렌지색의 타원형 필름코팅정,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/1NXa2J_Kd2y,,,
-200810125,에스시탈정5밀리그램(에스시탈로프람옥살산염),(주)종근당,정신신경용제,ETC,필름코팅정,원형,하양,CKD,ES5,,흰색의 원형 필름코팅정,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426407360700016,,,
-200810314,발산정80밀리그램(발사르탄),유니메드제약(주),혈압강하제,ETC,필름코팅정,원형,분홍,V분할선A,UM,,엷은 적색의 원형 필름코팅정,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/154298763309300033,,,
-200810338,가스리드정5mg(모사프리드시트르산염수화물),(주)유한양행,기타의 소화기관용약,ETC,필름코팅정,장방형,하양,YH,G분할선5,,분할선을 가진 흰색의 장방형 필름코팅정,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426407360700025,,,
-200810473,엑스반정80밀리그램(발사르탄),삼진제약(주),혈압강하제,ETC,필름코팅정,원형,분홍,SJ,V분할선8,,분홍색의 원형 필름코팅정,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/148665498867700136,,,
-200810509,뉴멘타민서방캡슐8밀리그램(갈란타민브롬화수소산염),고려제약(주),기타의 중추신경용약,ETC,스팬슐,장방형,하양,KDC NTC 8,,,흰색 내지 거의 흰색의 서방코팅된 펠렛이 들어있는 불투명한 상·하 흰색의 경질캡슐제,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/151706776344700079,,,
-200810522,발트렙정160밀리그램(발사르탄),경동제약(주),혈압강하제,ETC,필름코팅정,타원형,주황,KD분할선VT,160,,회색빛을 띠는 오렌지색의 타원형 필름코팅정,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426407360700046,,,
-200810789,수로신디정(탐스로신염산염),(주)에스트라,기타의 비뇨생식기관 및 항문용약,ETC,서방정,원형,하양,PAC,,,흰색의 원형 정제,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426407360700049,,,
-200810870,로수로드정10밀리그램(로수바스타틴칼슘),(주)종근당,동맥경화용제,ETC,필름코팅정,원형,분홍,CKDRSD10,,,분홍색의 원형 필름코팅정제,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/151706768099900035,,,
-200811104,디오살탄정160밀리그램(발사르탄),(주)유한양행,혈압강하제,ETC,필름코팅정,타원형,노랑,Y분할선H,160,,회색빛을 띠는 오렌지색의 타원형 필름코팅정,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/154298782012500025,,,
-200811105,디오살탄정80밀리그램(발사르탄),(주)유한양행,혈압강하제,ETC,필름코팅정,원형,분홍,Y분할선H,80,,엷은 적색의 원형필름코팅정,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/154298782012500031,,,
-200811403,칸데사르정8밀리그램(칸데사르탄실렉세틸),(주)한독,혈압강하제,ETC,나정,원형,분홍,마크분할선C8,,,양면이 볼록한 원형의 밝은 분홍색 정제,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/151706776344800062,,,
-200811404,칸데사르정16밀리그램(칸데사르탄실렉세틸),(주)에스트라,혈압강하제,ETC,나정,원형,분홍,마크분할선C16,,,양면이 볼록한 원형의 분홍색 정제,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/151706776344800068,,,
-200811619,디로탄정160mg(발사르탄),이연제약(주),혈압강하제,ETC,필름코팅정,타원형,주황,R분할선Y,160,,회색빛을 띠는 오렌지색의 타원형 필름코팅정,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426407360700097,,,
-200811883,인케어정(옥수수불검화정량추출물),(주)한국비엠아이,치과구강용약,OTC,필름코팅정,원형,주황,BMI,,,주황색의 원형 필름코팅정,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426407360700117,,,
-200811971,제이코정,제이에스제약(주),해열.진통.소염제,OTC,필름코팅정,장방형,하양,COΛ,분할선,,흰색의 장방형 필름코팅정제,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/150834126208100152,,,
-200900018,깅코탄연질캡슐120밀리그램(은행엽건조엑스),한국프라임제약(주),기타의 순환계용약,OTC,"연질캡슐제, 현탁상",타원형,초록,깅코탄,,,암갈색의 유상내용물이 든 녹색의 타원형 연질캡슐,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/1Mky9VD2vUV,,,
-200900026,리버풀350연질캡슐(밀크시슬열매건조엑스),신일제약(주),간장질환용제,OTC,"연질캡슐제, 현탁상",타원형,갈색,SI LIV,,,황갈색의 유상 내용물을 함유한 암적색의 장방형 연질캡슐,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/146031286653200142,,,
-200900193,모니맥정(모니플루메이트),맥널티제약(주),해열.진통.소염제,ETC,나정,장방형,하양,MNM,,,크림색의 장방형 정제,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426407360700170,,,
-200900194,모니필정350밀리그램(모니플루메이트),(주)테라젠이텍스,해열.진통.소염제,ETC,나정,장방형,하양,ETM,,,크림색의 장방형 정제,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/1NOwp2F6BNX,,,
-200900195,모니메르정(모니플루메이트),알리코제약(주),해열.진통.소염제,ETC,나정,장방형,하양,ALC,MFT,,크림색의 타원형 정제,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/152648520364900007,,,
-200900196,모니트정350밀리그램(모니플루메이트),(주)하원제약,해열.진통.소염제,ETC,나정,장방형,하양,hw19,350,,크림색의 타원형 정제,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/1O1A3H02Ph8,,,
-200900242,키비칼츄어블정,(유)한풍제약,혼합비타민제(비타민AD 혼합제제를 제외),OTC,추어블정(저작정),원형,분홍,HF,,,분홍색의 씹어먹는 원형정제,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426407360700190,,,
-200900378,칸데사르플러스정16/12.5밀리그램,(주)한독,혈압강하제,ETC,나정,장방형,주황,마크분할선CS,,,엷은 주황색의 장방형 정제,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/151706776344800074,,,
-200900605,코프나캡슐,(주)휴온스생명과학,진해거담제,OTC,"경질캡슐제, 산제",장방형,초록,BTO CNA,,,"흰색분말이 든 상부 진한녹색, 하부 흰색의 경질캡슐",https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426411393800014,,,
-200900682,굿스펜연질캡슐(덱시부프로펜),광동제약(주),해열.진통.소염제,OTC,"연질캡슐제, 액상",장방형,투명,KD GP,,,[내수용] 무색 내지 미색의 투명한 액상 내용물을 함유한 투명한 장방형 연질캡슐[수출용] 미황색의 투명한 유상내용물이 든 주황색의 투명한 타원형 연질캡슐,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/1Oikd3yeYje,,,
-200900823,가스파플러스정,(주)일화,소화성궤양용제,OTC,필름코팅정,원형,연두,IHP,G+,,녹색 내지 연녹색의 원형 필름코팅정제,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426411393800050,,,
-200900833,마이칼디정,명문제약(주),칼슘제,OTC,필름코팅정,장방형,주황,MM분할선D,,,황갈색의 장방형 필름코팅정제,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426411393800053,,,
-200900844,모빅캡슐7.5밀리그램(멜록시캄),한국베링거인겔하임(주),해열.진통.소염제,ETC,"경질캡슐제, 산제",장방형,초록,Mobic 7.5mg,,,"노란색 가루가 든 상,하 밝은 초록색 캡슐",https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/1Opnl07NLZB,,,
-200900845,모빅캡슐15밀리그램(멜록시캄),한국베링거인겔하임(주),해열.진통.소염제,ETC,"경질캡슐제, 산제",장방형,초록,Mobic 15mg,,,"노란색 가루가 든 상부 밝은 초록색, 하부 노란색 캡슐",https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/1Oa2BrqwGD-,,,
-200901014,코큐렉스연질캡슐,(주)알피바이오,기타의 비타민제,OTC,"연질캡슐제, 현탁상",장방형,검정,RPCQR,,,황갈색의 내용물을 함유한 암갈색의 장방형 연질캡슐제,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426411393800062,,,
-200901073,발크로버정500밀리그램(발라시클로비르염산염수화물),환인제약(주),기타의 화학요법제,ETC,필름코팅정,장방형,하양,VAL,W분할선I,,흰색의 양면이 볼록한 장방형의 필름코팅정제,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/154333342488200040,,,
-200901148,엔에이피정(나프록센나트륨),한솔신약(주),해열.진통.소염제,OTC,필름코팅정,타원형,파랑,T21,,,연한 파란색의 타원형 필름코팅정,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426411393800080,,,
-200901177,메디헤모연질캡슐,동화약품(주),무기질제제,OTC,"연질캡슐제, 현탁상",장방형,갈색,D-W MH,,,갈색의 유상 내용물을 함유한 암갈색의 장방형 연질캡슐,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/154661645880000003,,,
-200901187,이지에스정(방기황기탕건조엑스),주식회사 제이비케이랩,해열.진통.소염제,OTC,필름코팅정,원형,자주,INS,,,분홍색의 원형 필름코팅정,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/154333330132500115,,,
-200901205,제일아노민정,제일약품(주),기타의 자양강장변질제,OTC,필름코팅정,장방형,빨강,JI ΛN,,,진한갈 색의 장방형 필름코팅정,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/150834126208100146,,,
-200901403,미카몰정,한솔신약(주),골격근이완제,ETC,필름코팅정,장방형,하양,T23,MT,,흰색의 장방형 필름코팅정,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426411393800116,,,
-200901575,행심연질캡슐(은행엽건조엑스),동화약품(주),기타의 순환계용약,OTC,"연질캡슐제, 현탁상",타원형,초록,D-W GT,,,진한갈색의 내용물이 든 녹색의 타원형 연질캡슐,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/154661645880000009,,,
-200901619,알룬정,(주)휴온스,따로 분류되지 않는 대사성 의약품,OTC,필름코팅정,타원형,분홍,HS1,,,분홍색의 장방형 필를코팅정제,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426411393800128,,,
-200901620,미니메이드정(수출용),(주)넥스팜코리아,따로 분류되지 않는 대사성 의약품,OTC,필름코팅정,타원형,분홍,NK,,,분홍색의 장방형 필름코팅정제,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426411393800131,,,
-200901818,리버플란연질캡슐,(주)서흥,간장질환용제,OTC,"연질캡슐제, 현탁상",장방형,갈색,리버플란,,,황갈색의 내용물을 함유하는 암갈색의 장방형 연질캡슐제,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426411393800137,,,
-200902147,에코닉신정(클로닉신리시네이트),화일약품(주),해열.진통.소염제,OTC,필름코팅정,원형,주황,ECX,,,주황색의 원형 필름코팅정,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426411393800158,,,
-200902192,토넥스포르테캡슐,대우제약(주),기타의 중추신경용약,OTC,"경질캡슐제, 산제",장방형,빨강,TONEX-F 마크,,,엷은 홍색의 분말이 든 상·하부 적색의 경질캡슐제,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/151706768099900101,,,
-200902207,헤파라이프연질캡슐350mg(밀크시슬열매건조엑스),(주)테라젠이텍스,간장질환용제,OTC,"연질캡슐제, 현탁상",장방형,갈색,ETX H-L,,,황갈색의 유상 내용물을 함유한 암적색(검붉은 색)의 장방형 연질캡슐,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/1N9-UdVMReL,,,
-200902212,비타마인연질캡슐,(주)알피바이오,기타의 비타민제,OTC,"연질캡슐제, 현탁상",장방형,초록,VITAMINE,,,황녹색의 내용물을 함유한 암녹색 장방형 연질캡슐,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426411393800167,,,
-200902301,그날엔정,경동제약(주),해열.진통.소염제,OTC,다층정,원형,"하양, 빨강",N KYUNG DONG,,,"상, 하층은 백색 내지 유백색이고 중간층은 적색 내지 연적색인 원형 필름코팅 삼중정제이며, 상,하층에 적색반점이 있을 수 있다.",https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/151706776344700043,,,
-200902328,자베스카캡슐100밀리그램(미글루스타트),(주)한국얀센,따로 분류되지 않는 대사성 의약품,ETC,"경질캡슐제, 산제",장방형,하양,OGT 918 100,,,"백색-미백색의 분말을 함유하는 상,하부 백색의 경질캡슐",https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/1O7UMSVD8I4,,,
-200902364,이프렌에스연질캡슐(덱시부프로펜),삼진제약(주),해열.진통.소염제,OTC,"연질캡슐제, 액상",장방형,"청록, 투명",SJ DX,,,무색 내지 연한 청록색의 투명한 내용물이 든 연청록색의 투명한 장방형 연질캡슐,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/1ONpCOpRdVF,,,
-200902452,맥스비타플러스정,(유)한풍제약,혼합비타민제(비타민AD 혼합제제를 제외),OTC,필름코팅정,타원형,주황,GHT,,,주황색의 타원형 필름코팅정제,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426416757400005,,,
-200902506,에델피스연질캡슐(디펜히드라민염산염),삼진제약(주),최면진정제,OTC,"연질캡슐제, 액상",타원형,"청록, 투명",SJED,,,무색 투명한 액상의 내용물을 함유한 연청록색의 볼록한 타원형 연질캡슐,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/1MgMniIZaON,,,
-200902577,제이에스콜드정,제이에스제약(주),해열.진통.소염제,OTC,필름코팅정,장방형,분홍,CORE,,,연분홍색의 장방형 필름코팅정,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426416757400017,,,
-200902743,오메콜캡슐,청계제약(주),해열.진통.소염제,OTC,"경질캡슐제, 산제",장방형,파랑,SCP OM,,,"백색-미황색의 가루가 든 상부 청색, 하부 흰색의 경질캡슐제",https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426416757400026,,,
-200902749,리드비타큐정,(유)한풍제약,혼합비타민제(비타민AD 혼합제제를 제외),OTC,필름코팅정,타원형,빨강,GHT,,,주황색의 타원형 필름코팅정제,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426416757400029,,,
-200902791,비타엔큐연질캡슐,동화약품(주),기타의 비타민제,OTC,"연질캡슐제, 현탁상",장방형,갈색,D-W VQ,,,황갈색의 내용물을 함유하는 암갈색의 장방형 연질캡슐,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/154661645880000015,,,
-200902801,카페그린정,청계제약(주),해열.진통.소염제,OTC,필름코팅정,타원형,파랑,SCP,DL,,연한 청색의 타원형 장용 필름코팅정,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426416757400047,,,
-200902805,트리답티브정,한국엠에스디(주),동맥경화용제,ETC,다층정,장방형,하양,552,,,흰색 또는 엷은 흰색으로 한면에 ‘552’가 새겨진 양면이 볼록한 장방형의 서방성 이층정,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147817442818700152,,,
-200902876,코프노캡슐,(주)휴온스생명과학,진해거담제,OTC,"경질캡슐제, 산제",장방형,노랑,BTO CN,,,미황색 분말이 충진된 상하부 황색의 경질캡슐제,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426416757400053,,,
-200902884,이젠이캡슐,경진제약(주),치과구강용약,OTC,"경질캡슐제, 산제",장방형,파랑,이젠이 이젠이,,,"엷은 주황색가루가 든 상,하부 연청색의 경질 캡슐제",https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/1Mv12iojCfp,,,
-200902918,오렉스캡슐,(주)휴온스생명과학,기타의 중추신경용약,OTC,"경질캡슐제, 산제",장방형,빨강,BTO ORX,,,분홍색분말이 들어있는 상하부 적색의 경질캡슐제,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426416757400062,,,
-200902983,선콜정,한솔신약(주),해열.진통.소염제,OTC,필름코팅정,장방형,분홍,T37,,,연분홍색의 장방형 필름코팅정,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426416757400068,,,
-200903022,베리콜노즈정,삼천당제약(주),해열.진통.소염제,OTC,필름코팅정,장방형,분홍,분할선,SCD,,장방형의 분홍색 필름코팅정,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426416757400071,,,
-200903023,마그놀정,(주)제뉴파마,"하제, 완장제",OTC,"정제, 미분류",타원형,하양,BPMA,,,흰색의 타원형 필름코팅정제,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426416757400074,,,
-200903040,덴티콤캡슐,천우신약(주),치과구강용약,OTC,"캡슐, 미분류",장방형,파랑,SNP DTC,,,"짙은 청록색 가루가 든 상부 담청색, 하부 담청색의 경질캡슐제",https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426416757400077,,,
-200903043,리버파워포르테연질캡슐,아이큐어(주),간장질환용제,OTC,"연질캡슐제, 현탁상",장방형,초록,SC200,,,황갈색의 내용물을 함유한 황녹색의 장방형 연질캡슐,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426416757400080,,,
-200903044,본렉스이알캡슐15밀리그램(시클로벤자프린염산염),(주)새한제약,골격근이완제,ETC,"서방성캡슐제, 펠렛",장방형,주황,Bonelax ER 15mg,,,흰색 내지 미백색의 구형 입자가 들어있는 상·하부 밝은 주황색의 불투명 서방성 경질캡슐,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/1Me1jz_9pfx,,,
-200903045,본렉스이알캡슐30밀리그램(시클로벤자프린염산염),(주)새한제약,골격근이완제,ETC,"서방성캡슐제, 펠렛",장방형,빨강,Bonelax ER 30mg,,,"흰색 내지 미백색의 구형 입자가 들어있는 상부 빨강색, 하부 진한 파랑색의 불투명 서방성 경질캡슐",https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/1Mdm43vUUC-,,,
-200903055,오메코프정,(주)에이프로젠바이오로직스,해열.진통.소염제,OTC,필름코팅정,원형,하양,SCP,OC,,흰색의 원형필름코팅정,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426416757400089,,,
-200903065,산도스올란자핀정10밀리그램,삼일제약(주),정신신경용제,ETC,필름코팅정,원형,하양,SZ,10,,흰색의 원형 필름코팅 정제,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/1MeM47xF873,,,
-200903066,올란프레서정10mg(올란자핀),한국노바티스(주),정신신경용제,ETC,필름코팅정,원형,하양,SZ,10,,흰색의 원형 필름코팅 정제,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426416757400099,,,
-200903067,산도스올란자핀정5밀리그램,삼일제약(주),정신신경용제,ETC,필름코팅정,원형,하양,SZ,5,,흰색의 원형 필름코팅정제,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/1MeM47xF86T,,,
-200903068,올란프레서정5mg (올란자핀),한국노바티스(주),정신신경용제,ETC,필름코팅정,원형,하양,SZ,5,,흰색의 원형 필름코팅정제,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426416757400107,,,
-200903078,산도스올란자핀정2.5밀리그램,삼일제약(주),정신신경용제,ETC,필름코팅정,원형,하양,SZ,2.5,,흰색의 원형 필름코팅정제,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/1MeM47xF85t,,,
-200903080,올란프레서정2.5mg (올란자핀),한국노바티스(주),정신신경용제,ETC,필름코팅정,원형,하양,SZ,2.5,,흰색의 원형 필름코팅정제,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426416757400122,,,
-200903183,센트룸실버정,한국화이자제약(주),20091110,3160,일반의약품,SELECT,W분할선2,"다른쪽 면에는 ”SELECT\""가 각각 새겨져 있다.""",https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/1MwITgp4WIn,,이 약은 회색의 타원형 필름코팅정으로 한쪽 면에는 왼쪽에 “W\,오른쪽에”2“가,,,
-200903210,헤파피스연질캡슐,(주)에이프로젠바이오로직스,간장질환용제,OTC,"연질캡슐제, 현탁상",장방형,연두,CGP HP,,,황갈색의 유상내용물을 함유한 황녹색의 장방형 연질캡슐,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/148604072451200094,,,
-200903217,메펜연질캡슐(메페남산),한솔신약(주),해열.진통.소염제,ETC,"연질캡슐제, 현탁상",장방형,파랑,메펜,,,연한 청색 내용물을 함유한 청색의 장방형 연질캡슐,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426416757400143,,,
-200903247,센타민플러스연질캡슐,(주)알피바이오,기타의 비타민제,OTC,"연질캡슐제, 현탁상",장방형,갈색,RPSTM,,,주황색의 내용물을 포함한 갈색의 장방형 연질캡슐,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426416757400155,,,
-200903378,헤모퀸골드캡슐,경남제약(주),무기질제제,OTC,"경질캡슐제, 산제",장방형,갈색,KN HQ,,,갈색의 분말이 충진된 상·하부 적갈색의 경질캡슐제,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/1NOwp2F6KEQ,,,
-200903392,제로민연질캡슐(디펜히드라민염산염),한솔신약(주),최면진정제,OTC,"연질캡슐제, 액상",타원형,"청록, 투명",제로민,,,무색 내지 연한 청록색의 투명한 액상의 내용물을 함유한 연청록색의 볼록한 타원형 연질캡슐,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426416757400164,,,
-200903395,비나코연질캡슐,한솔신약(주),해열.진통.소염제,OTC,"연질캡슐제, 액상",장방형,"파랑, 투명",비나코,,,미황 내지 연한 청색의 투명한 액상 내용물이 든 청색의 투명한 장방형의 연질캡슐,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/147426416757400167,,,
-200903409,리피다운캡슐120밀리그램(오르리스타트),한미약품(주),따로 분류되지 않는 대사성 의약품,ETC,"경질캡슐제, 과립제",장방형,파랑,Hanmi Lipidown 120,,,흰색 내지 연한노란색의 펠렛이 든 청록색의 경질캡슐제,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/151706772283900057,,,
-200903482,비오펜연질캡슐(덱시부프로펜),(주)동구바이오제약,해열.진통.소염제,OTC,"연질캡슐제, 액상",타원형,초록,DCD,,,무색 내지 연한 녹색의 투명한 액상 내용물을 함유한 녹색의 장방형 연질캡슐,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/146031002845800195,,,
-200903579,카이로정,한솔신약(주),진경제,OTC,필름코팅정,장방형,하양,T32,분할선,,흰색의 장방형 필름코팅정,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/1NNuh6mJov1,,,
-200903580,덴탈에프정(옥수수불검화정량추출물),한솔신약(주),치과구강용약,OTC,당의정,원형,주황,T-32,,,주황색의 원형 당의정,https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/154661648918900142,,,
-200903585,마이에신캡슐(은교산),한솔신약(주),해열.진통.소염제,OTC,"경질캡슐제, 산제",장방형,갈색,마이에신 마이에신,,,"갈색의 분말이 충진된 상부 갈색, 하부 백색의 경질캡슐제",https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/151706772284000000,,,
+,가스디알정50밀리그램(디메크로틴산마그네슘),일동제약(주),,,,,연두,IDG,,,당의정,https://placehold.co/128x128/png?text=%EA%B0%80%EC%8A%A4%EB%94%94%EC%95%8C%EC%A0%9550%EB%B0%80%EB%A6%AC%EA%B7%B8,,,
+,가스리드정5mg(모사프리드시트르산염수화물),(주)유한양행,,,,,하양,YH,G분할선5,,필름코팅정,https://placehold.co/128x128/png?text=%EA%B0%80%EC%8A%A4%EB%A6%AC%EB%93%9C%EC%A0%955mg%28%EB%AA%A8,,,
+,가스베트정5밀리그램(모사프리드시트르산염수화물),일동제약(주),,,,,하양,ID·5,분할선,,필름코팅정,https://placehold.co/128x128/png?text=%EA%B0%80%EC%8A%A4%EB%B2%A0%ED%8A%B8%EC%A0%955%EB%B0%80%EB%A6%AC%EA%B7%B8%EB%9E%A8,,,
+,가스터정20mg,Sample제약,,,,원형,흰색,D43,B43,C43,흰색 원형 정제,https://placehold.co/128x128/png?text=%EA%B0%80%EC%8A%A4%ED%84%B0%EC%A0%9520mg,"진통, 해열, 소염","성인 1회 1정, 1일 3회",과량 복용 주의
+,가스파플러스정,(주)일화,,,,,연두,IHP,G+,,필름코팅정,https://placehold.co/128x128/png?text=%EA%B0%80%EC%8A%A4%ED%8C%8C%ED%94%8C%EB%9F%AC%EC%8A%A4%EC%A0%95,,,
+,가스프렌정(모사프리드시트르산염이수화물),경동제약(주),,,,,하양,KD,분할선,,필름코팅정,https://placehold.co/128x128/png?text=%EA%B0%80%EC%8A%A4%ED%94%84%EB%A0%8C%EC%A0%95%28%EB%AA%A8%EC%82%AC%ED%94%84%EB%A6%AC,,,
+,게보린정,Sample제약,,,,원형,흰색,D2,B2,C2,흰색 원형 정제,https://placehold.co/128x128/png?text=%EA%B2%8C%EB%B3%B4%EB%A6%B0%EC%A0%95,"진통, 해열, 소염","성인 1회 1정, 1일 3회",과량 복용 주의
+,굿스펜연질캡슐(덱시부프로펜),광동제약(주),,,,,투명,KD GP,,,"연질캡슐제, 액상",https://placehold.co/128x128/png?text=%EA%B5%BF%EC%8A%A4%ED%8E%9C%EC%97%B0%EC%A7%88%EC%BA%A1%EC%8A%90%28%EB%8D%B1%EC%8B%9C,,,
+,그날엔정,경동제약(주),,,,,"하양, 빨강",N KYUNG DONG,,,다층정,https://placehold.co/128x128/png?text=%EA%B7%B8%EB%82%A0%EC%97%94%EC%A0%95,,,
+,글루코파지정,Sample제약,,,,원형,흰색,D28,B28,C28,흰색 원형 정제,https://placehold.co/128x128/png?text=%EA%B8%80%EB%A3%A8%EC%BD%94%ED%8C%8C%EC%A7%80%EC%A0%95,"진통, 해열, 소염","성인 1회 1정, 1일 3회",과량 복용 주의
+,깅코탄연질캡슐120밀리그램(은행엽건조엑스),한국프라임제약(주),,,,,초록,깅코탄,,,"연질캡슐제, 현탁상",https://placehold.co/128x128/png?text=%EA%B9%85%EC%BD%94%ED%83%84%EC%97%B0%EC%A7%88%EC%BA%A1%EC%8A%90120,,,
+,네시나정,Sample제약,,,,원형,흰색,D42,B42,C42,흰색 원형 정제,https://placehold.co/128x128/png?text=%EB%84%A4%EC%8B%9C%EB%82%98%EC%A0%95,"진통, 해열, 소염","성인 1회 1정, 1일 3회",과량 복용 주의
+,넥시움정40mg,Sample제약,,,,원형,흰색,D46,B46,C46,흰색 원형 정제,https://placehold.co/128x128/png?text=%EB%84%A5%EC%8B%9C%EC%9B%80%EC%A0%9540mg,"진통, 해열, 소염","성인 1회 1정, 1일 3회",과량 복용 주의
+,뉴멘타민서방캡슐8밀리그램(갈란타민브롬화수소산염),고려제약(주),,,,,하양,KDC NTC 8,,,스팬슐,https://placehold.co/128x128/png?text=%EB%89%B4%EB%A9%98%ED%83%80%EB%AF%BC%EC%84%9C%EB%B0%A9%EC%BA%A1%EC%8A%908%EB%B0%80,,,
+,닥터베아제정,Sample제약,,,,원형,흰색,D19,B19,C19,흰색 원형 정제,https://placehold.co/128x128/png?text=%EB%8B%A5%ED%84%B0%EB%B2%A0%EC%95%84%EC%A0%9C%EC%A0%95,"진통, 해열, 소염","성인 1회 1정, 1일 3회",과량 복용 주의
+,덴탈에프정(옥수수불검화정량추출물),한솔신약(주),,,,,주황,T-32,,,당의정,https://placehold.co/128x128/png?text=%EB%8D%B4%ED%83%88%EC%97%90%ED%94%84%EC%A0%95%28%EC%98%A5%EC%88%98%EC%88%98%EB%B6%88,,,
+,덴티콤캡슐,천우신약(주),,,,,파랑,SNP DTC,,,"캡슐, 미분류",https://placehold.co/128x128/png?text=%EB%8D%B4%ED%8B%B0%EC%BD%A4%EC%BA%A1%EC%8A%90,,,
+,디로탄정160mg(발사르탄),이연제약(주),,,,,주황,R분할선Y,160,,필름코팅정,https://placehold.co/128x128/png?text=%EB%94%94%EB%A1%9C%ED%83%84%EC%A0%95160mg%28,,,
+,디스톤골드연질캡슐,한미약품(주),,,,,갈색,FT-CRE,,,"연질캡슐제, 현탁상",https://placehold.co/128x128/png?text=%EB%94%94%EC%8A%A4%ED%86%A4%EA%B3%A8%EB%93%9C%EC%97%B0%EC%A7%88%EC%BA%A1%EC%8A%90,,,
+,디오살탄정160밀리그램(발사르탄),(주)유한양행,,,,,노랑,Y분할선H,160,,필름코팅정,https://placehold.co/128x128/png?text=%EB%94%94%EC%98%A4%EC%82%B4%ED%83%84%EC%A0%95160%EB%B0%80%EB%A6%AC,,,
+,디오살탄정80밀리그램(발사르탄),(주)유한양행,,,,,분홍,Y분할선H,80,,필름코팅정,https://placehold.co/128x128/png?text=%EB%94%94%EC%98%A4%EC%82%B4%ED%83%84%EC%A0%9580%EB%B0%80%EB%A6%AC%EA%B7%B8,,,
+,란소프라졸캡슐30mg,Sample제약,,,,원형,흰색,D47,B47,C47,흰색 원형 정제,https://placehold.co/128x128/png?text=%EB%9E%80%EC%86%8C%ED%94%84%EB%9D%BC%EC%A1%B8%EC%BA%A1%EC%8A%9030m,"진통, 해열, 소염","성인 1회 1정, 1일 3회",과량 복용 주의
+,레바미피드정,Sample제약,,,,원형,흰색,D48,B48,C48,흰색 원형 정제,https://placehold.co/128x128/png?text=%EB%A0%88%EB%B0%94%EB%AF%B8%ED%94%BC%EB%93%9C%EC%A0%95,"진통, 해열, 소염","성인 1회 1정, 1일 3회",과량 복용 주의
+,로수로드정10밀리그램(로수바스타틴칼슘),(주)종근당,,,,,분홍,CKDRSD10,,,필름코팅정,https://placehold.co/128x128/png?text=%EB%A1%9C%EC%88%98%EB%A1%9C%EB%93%9C%EC%A0%9510%EB%B0%80%EB%A6%AC%EA%B7%B8,,,
+,로수바스타틴정,Sample제약,,,,원형,흰색,D33,B33,C33,흰색 원형 정제,https://placehold.co/128x128/png?text=%EB%A1%9C%EC%88%98%EB%B0%94%EC%8A%A4%ED%83%80%ED%8B%B4%EC%A0%95,"진통, 해열, 소염","성인 1회 1정, 1일 3회",과량 복용 주의
+,리드비타큐정,(유)한풍제약,,,,,빨강,GHT,,,필름코팅정,https://placehold.co/128x128/png?text=%EB%A6%AC%EB%93%9C%EB%B9%84%ED%83%80%ED%81%90%EC%A0%95,,,
+,리버파워포르테연질캡슐,아이큐어(주),,,,,초록,SC200,,,"연질캡슐제, 현탁상",https://placehold.co/128x128/png?text=%EB%A6%AC%EB%B2%84%ED%8C%8C%EC%9B%8C%ED%8F%AC%EB%A5%B4%ED%85%8C%EC%97%B0%EC%A7%88%EC%BA%A1,,,
+,리버풀350연질캡슐(밀크시슬열매건조엑스),신일제약(주),,,,,갈색,SI LIV,,,"연질캡슐제, 현탁상",https://placehold.co/128x128/png?text=%EB%A6%AC%EB%B2%84%ED%92%80350%EC%97%B0%EC%A7%88%EC%BA%A1%EC%8A%90,,,
+,리버플란연질캡슐,(주)서흥,,,,,갈색,리버플란,,,"연질캡슐제, 현탁상",https://placehold.co/128x128/png?text=%EB%A6%AC%EB%B2%84%ED%94%8C%EB%9E%80%EC%97%B0%EC%A7%88%EC%BA%A1%EC%8A%90,,,
+,리피논정80밀리그램(아토르바스타틴칼슘삼수화물),동아에스티(주),,,,,하양,LPT,80,,필름코팅정,https://placehold.co/128x128/png?text=%EB%A6%AC%ED%94%BC%EB%85%BC%EC%A0%9580%EB%B0%80%EB%A6%AC%EA%B7%B8%EB%9E%A8,,,
+,리피다운캡슐120밀리그램(오르리스타트),한미약품(주),,,,,파랑,Hanmi Lipidown 120,,,"경질캡슐제, 과립제",https://placehold.co/128x128/png?text=%EB%A6%AC%ED%94%BC%EB%8B%A4%EC%9A%B4%EC%BA%A1%EC%8A%90120%EB%B0%80,,,
+,리피토정20mg,Sample제약,,,,원형,흰색,D10,B10,C10,흰색 원형 정제,https://placehold.co/128x128/png?text=%EB%A6%AC%ED%94%BC%ED%86%A0%EC%A0%9520mg,"진통, 해열, 소염","성인 1회 1정, 1일 3회",과량 복용 주의
+,마그놀정,(주)제뉴파마,,,,,하양,BPMA,,,"정제, 미분류",https://placehold.co/128x128/png?text=%EB%A7%88%EA%B7%B8%EB%86%80%EC%A0%95,,,
+,마그밀정,Sample제약,,,,원형,흰색,D22,B22,C22,흰색 원형 정제,https://placehold.co/128x128/png?text=%EB%A7%88%EA%B7%B8%EB%B0%80%EC%A0%95,"진통, 해열, 소염","성인 1회 1정, 1일 3회",과량 복용 주의
+,마이에신캡슐(은교산),한솔신약(주),,,,,갈색,마이에신 마이에신,,,"경질캡슐제, 산제",https://placehold.co/128x128/png?text=%EB%A7%88%EC%9D%B4%EC%97%90%EC%8B%A0%EC%BA%A1%EC%8A%90%28%EC%9D%80%EA%B5%90%EC%82%B0,,,
+,마이칼디정,명문제약(주),,,,,주황,MM분할선D,,,필름코팅정,https://placehold.co/128x128/png?text=%EB%A7%88%EC%9D%B4%EC%B9%BC%EB%94%94%EC%A0%95,,,
+,맥스비타플러스정,(유)한풍제약,,,,,주황,GHT,,,필름코팅정,https://placehold.co/128x128/png?text=%EB%A7%A5%EC%8A%A4%EB%B9%84%ED%83%80%ED%94%8C%EB%9F%AC%EC%8A%A4%EC%A0%95,,,
+,메디헤모연질캡슐,동화약품(주),,,,,갈색,D-W MH,,,"연질캡슐제, 현탁상",https://placehold.co/128x128/png?text=%EB%A9%94%EB%94%94%ED%97%A4%EB%AA%A8%EC%97%B0%EC%A7%88%EC%BA%A1%EC%8A%90,,,
+,메트포민정500mg,Sample제약,,,,원형,흰색,D27,B27,C27,흰색 원형 정제,https://placehold.co/128x128/png?text=%EB%A9%94%ED%8A%B8%ED%8F%AC%EB%AF%BC%EC%A0%95500mg,"진통, 해열, 소염","성인 1회 1정, 1일 3회",과량 복용 주의
+,메펜연질캡슐(메페남산),한솔신약(주),,,,,파랑,메펜,,,"연질캡슐제, 현탁상",https://placehold.co/128x128/png?text=%EB%A9%94%ED%8E%9C%EC%97%B0%EC%A7%88%EC%BA%A1%EC%8A%90%28%EB%A9%94%ED%8E%98%EB%82%A8,,,
+,모니맥정(모니플루메이트),맥널티제약(주),,,,,하양,MNM,,,나정,https://placehold.co/128x128/png?text=%EB%AA%A8%EB%8B%88%EB%A7%A5%EC%A0%95%28%EB%AA%A8%EB%8B%88%ED%94%8C%EB%A3%A8%EB%A9%94,,,
+,모니메르정(모니플루메이트),알리코제약(주),,,,,하양,ALC,MFT,,나정,https://placehold.co/128x128/png?text=%EB%AA%A8%EB%8B%88%EB%A9%94%EB%A5%B4%EC%A0%95%28%EB%AA%A8%EB%8B%88%ED%94%8C%EB%A3%A8,,,
+,모니트정350밀리그램(모니플루메이트),(주)하원제약,,,,,하양,hw19,350,,나정,https://placehold.co/128x128/png?text=%EB%AA%A8%EB%8B%88%ED%8A%B8%EC%A0%95350%EB%B0%80%EB%A6%AC%EA%B7%B8,,,
+,모니필정350밀리그램(모니플루메이트),(주)테라젠이텍스,,,,,하양,ETM,,,나정,https://placehold.co/128x128/png?text=%EB%AA%A8%EB%8B%88%ED%95%84%EC%A0%95350%EB%B0%80%EB%A6%AC%EA%B7%B8,,,
+,모빅캡슐15밀리그램(멜록시캄),한국베링거인겔하임(주),,,,,초록,Mobic 15mg,,,"경질캡슐제, 산제",https://placehold.co/128x128/png?text=%EB%AA%A8%EB%B9%85%EC%BA%A1%EC%8A%9015%EB%B0%80%EB%A6%AC%EA%B7%B8%EB%9E%A8,,,
+,모빅캡슐7.5밀리그램(멜록시캄),한국베링거인겔하임(주),,,,,초록,Mobic 7.5mg,,,"경질캡슐제, 산제",https://placehold.co/128x128/png?text=%EB%AA%A8%EB%B9%85%EC%BA%A1%EC%8A%907.5%EB%B0%80%EB%A6%AC%EA%B7%B8,,,
+,미니메이드정(수출용),(주)넥스팜코리아,,,,,분홍,NK,,,필름코팅정,https://placehold.co/128x128/png?text=%EB%AF%B8%EB%8B%88%EB%A9%94%EC%9D%B4%EB%93%9C%EC%A0%95%28%EC%88%98%EC%B6%9C%EC%9A%A9,,,
+,미카몰정,한솔신약(주),,,,,하양,T23,MT,,필름코팅정,https://placehold.co/128x128/png?text=%EB%AF%B8%EC%B9%B4%EB%AA%B0%EC%A0%95,,,
+,바르탄정(발사르탄),(주)휴온스,,,,,분홍,V분할선T,HS8,,필름코팅정,https://placehold.co/128x128/png?text=%EB%B0%94%EB%A5%B4%ED%83%84%EC%A0%95%28%EB%B0%9C%EC%82%AC%EB%A5%B4%ED%83%84%29,,,
+,바이토린정10/10,Sample제약,,,,원형,흰색,D35,B35,C35,흰색 원형 정제,https://placehold.co/128x128/png?text=%EB%B0%94%EC%9D%B4%ED%86%A0%EB%A6%B0%EC%A0%9510/10,"진통, 해열, 소염","성인 1회 1정, 1일 3회",과량 복용 주의
+,박카스D드링크,Sample제약,,,,원형,흰색,D16,B16,C16,흰색 원형 정제,https://placehold.co/128x128/png?text=%EB%B0%95%EC%B9%B4%EC%8A%A4D%EB%93%9C%EB%A7%81%ED%81%AC,"진통, 해열, 소염","성인 1회 1정, 1일 3회",과량 복용 주의
+,발사르텔정160밀리그램(발사르탄),주식회사제뉴원사이언스,,,,,주황,V분할선16,KK,,필름코팅정,https://placehold.co/128x128/png?text=%EB%B0%9C%EC%82%AC%EB%A5%B4%ED%85%94%EC%A0%95160%EB%B0%80%EB%A6%AC,,,
+,발사르텔정80밀리그램(발사르탄),주식회사제뉴원사이언스,,,,,분홍,V분할선8,KK,,필름코팅정,https://placehold.co/128x128/png?text=%EB%B0%9C%EC%82%AC%EB%A5%B4%ED%85%94%EC%A0%9580%EB%B0%80%EB%A6%AC%EA%B7%B8,,,
+,발산정80밀리그램(발사르탄),유니메드제약(주),,,,,분홍,V분할선A,UM,,필름코팅정,https://placehold.co/128x128/png?text=%EB%B0%9C%EC%82%B0%EC%A0%9580%EB%B0%80%EB%A6%AC%EA%B7%B8%EB%9E%A8%28,,,
+,발크로버정500밀리그램(발라시클로비르염산염수화물),환인제약(주),,,,,하양,VAL,W분할선I,,필름코팅정,https://placehold.co/128x128/png?text=%EB%B0%9C%ED%81%AC%EB%A1%9C%EB%B2%84%EC%A0%95500%EB%B0%80%EB%A6%AC,,,
+,발트렙정160밀리그램(발사르탄),경동제약(주),,,,,주황,KD분할선VT,160,,필름코팅정,https://placehold.co/128x128/png?text=%EB%B0%9C%ED%8A%B8%EB%A0%99%EC%A0%95160%EB%B0%80%EB%A6%AC%EA%B7%B8,,,
+,베리콜노즈정,삼천당제약(주),,,,,분홍,분할선,SCD,,필름코팅정,https://placehold.co/128x128/png?text=%EB%B2%A0%EB%A6%AC%EC%BD%9C%EB%85%B8%EC%A6%88%EC%A0%95,,,
+,베아제정,Sample제약,,,,원형,흰색,D18,B18,C18,흰색 원형 정제,https://placehold.co/128x128/png?text=%EB%B2%A0%EC%95%84%EC%A0%9C%EC%A0%95,"진통, 해열, 소염","성인 1회 1정, 1일 3회",과량 복용 주의
+,베아제플러스정,Sample제약,,,,원형,흰색,D49,B49,C49,흰색 원형 정제,https://placehold.co/128x128/png?text=%EB%B2%A0%EC%95%84%EC%A0%9C%ED%94%8C%EB%9F%AC%EC%8A%A4%EC%A0%95,"진통, 해열, 소염","성인 1회 1정, 1일 3회",과량 복용 주의
+,본렉스이알캡슐15밀리그램(시클로벤자프린염산염),(주)새한제약,,,,,주황,Bonelax ER 15mg,,,"서방성캡슐제, 펠렛",https://placehold.co/128x128/png?text=%EB%B3%B8%EB%A0%89%EC%8A%A4%EC%9D%B4%EC%95%8C%EC%BA%A1%EC%8A%9015%EB%B0%80,,,
+,본렉스이알캡슐30밀리그램(시클로벤자프린염산염),(주)새한제약,,,,,빨강,Bonelax ER 30mg,,,"서방성캡슐제, 펠렛",https://placehold.co/128x128/png?text=%EB%B3%B8%EB%A0%89%EC%8A%A4%EC%9D%B4%EC%95%8C%EC%BA%A1%EC%8A%9030%EB%B0%80,,,
+,비나코연질캡슐,한솔신약(주),,,,,"파랑, 투명",비나코,,,"연질캡슐제, 액상",https://placehold.co/128x128/png?text=%EB%B9%84%EB%82%98%EC%BD%94%EC%97%B0%EC%A7%88%EC%BA%A1%EC%8A%90,,,
+,비오펜연질캡슐(덱시부프로펜),(주)동구바이오제약,,,,,초록,DCD,,,"연질캡슐제, 액상",https://placehold.co/128x128/png?text=%EB%B9%84%EC%98%A4%ED%8E%9C%EC%97%B0%EC%A7%88%EC%BA%A1%EC%8A%90%28%EB%8D%B1%EC%8B%9C,,,
+,비타마인연질캡슐,(주)알피바이오,,,,,초록,VITAMINE,,,"연질캡슐제, 현탁상",https://placehold.co/128x128/png?text=%EB%B9%84%ED%83%80%EB%A7%88%EC%9D%B8%EC%97%B0%EC%A7%88%EC%BA%A1%EC%8A%90,,,
+,비타엔큐연질캡슐,동화약품(주),,,,,갈색,D-W VQ,,,"연질캡슐제, 현탁상",https://placehold.co/128x128/png?text=%EB%B9%84%ED%83%80%EC%97%94%ED%81%90%EC%97%B0%EC%A7%88%EC%BA%A1%EC%8A%90,,,
+,사르발탄정160밀리그램(발사르탄),(주)서울제약,,,,,주황,SPC,V분할선16,,필름코팅정,https://placehold.co/128x128/png?text=%EC%82%AC%EB%A5%B4%EB%B0%9C%ED%83%84%EC%A0%95160%EB%B0%80%EB%A6%AC,,,
+,삭센다펜,Sample제약,,,,원형,흰색,D24,B24,C24,흰색 원형 정제,https://placehold.co/128x128/png?text=%EC%82%AD%EC%84%BC%EB%8B%A4%ED%8E%9C,"진통, 해열, 소염","성인 1회 1정, 1일 3회",과량 복용 주의
+,삭센다펜주,Sample제약,,,,원형,흰색,D6,B6,C6,흰색 원형 정제,https://placehold.co/128x128/png?text=%EC%82%AD%EC%84%BC%EB%8B%A4%ED%8E%9C%EC%A3%BC,"진통, 해열, 소염","성인 1회 1정, 1일 3회",과량 복용 주의
+,산도스올란자핀정10밀리그램,삼일제약(주),,,,,하양,SZ,10,,필름코팅정,https://placehold.co/128x128/png?text=%EC%82%B0%EB%8F%84%EC%8A%A4%EC%98%AC%EB%9E%80%EC%9E%90%ED%95%80%EC%A0%9510,,,
+,산도스올란자핀정2.5밀리그램,삼일제약(주),,,,,하양,SZ,2.5,,필름코팅정,https://placehold.co/128x128/png?text=%EC%82%B0%EB%8F%84%EC%8A%A4%EC%98%AC%EB%9E%80%EC%9E%90%ED%95%80%EC%A0%952.,,,
+,산도스올란자핀정5밀리그램,삼일제약(주),,,,,하양,SZ,5,,필름코팅정,https://placehold.co/128x128/png?text=%EC%82%B0%EB%8F%84%EC%8A%A4%EC%98%AC%EB%9E%80%EC%9E%90%ED%95%80%EC%A0%955%EB%B0%80,,,
+,선콜정,한솔신약(주),,,,,분홍,T37,,,필름코팅정,https://placehold.co/128x128/png?text=%EC%84%A0%EC%BD%9C%EC%A0%95,,,
+,센타민플러스연질캡슐,(주)알피바이오,,,,,갈색,RPSTM,,,"연질캡슐제, 현탁상",https://placehold.co/128x128/png?text=%EC%84%BC%ED%83%80%EB%AF%BC%ED%94%8C%EB%9F%AC%EC%8A%A4%EC%97%B0%EC%A7%88%EC%BA%A1%EC%8A%90,,,
+,센트룸실버정,한국화이자제약(주),,,,,W분할선2,"다른쪽 면에는 ”SELECT\""가 각각 새겨져 있다.""",https://nedrug.mfds.go.kr/pbp/cmn/itemImageDownload/1MwITgp4WIn,,일반의약품,https://placehold.co/128x128/png?text=%EC%84%BC%ED%8A%B8%EB%A3%B8%EC%8B%A4%EB%B2%84%EC%A0%95,,,
+,수로신디정(탐스로신염산염),(주)에스트라,,,,,하양,PAC,,,서방정,https://placehold.co/128x128/png?text=%EC%88%98%EB%A1%9C%EC%8B%A0%EB%94%94%EC%A0%95%28%ED%83%90%EC%8A%A4%EB%A1%9C%EC%8B%A0,,,
+,스프라이셀정50밀리그램(다사티닙),(유)한국비엠에스제약,,,,,하양,BMS,528,,필름코팅정,https://placehold.co/128x128/png?text=%EC%8A%A4%ED%94%84%EB%9D%BC%EC%9D%B4%EC%85%80%EC%A0%9550%EB%B0%80%EB%A6%AC,,,
+,시네츄라시럽,Sample제약,,,,원형,흰색,D7,B7,C7,흰색 원형 정제,https://placehold.co/128x128/png?text=%EC%8B%9C%EB%84%A4%EC%B8%84%EB%9D%BC%EC%8B%9C%EB%9F%BD,"진통, 해열, 소염","성인 1회 1정, 1일 3회",과량 복용 주의
+,신일아네론정,Sample제약,,,,원형,흰색,D11,B11,C11,흰색 원형 정제,https://placehold.co/128x128/png?text=%EC%8B%A0%EC%9D%BC%EC%95%84%EB%84%A4%EB%A1%A0%EC%A0%95,"진통, 해열, 소염","성인 1회 1정, 1일 3회",과량 복용 주의
+,신타민씨정1000,Sample제약,,,,원형,흰색,D5,B5,C5,흰색 원형 정제,https://placehold.co/128x128/png?text=%EC%8B%A0%ED%83%80%EB%AF%BC%EC%94%A8%EC%A0%951000,"진통, 해열, 소염","성인 1회 1정, 1일 3회",과량 복용 주의
+,신플라비정,Sample제약,,,,원형,흰색,D38,B38,C38,흰색 원형 정제,https://placehold.co/128x128/png?text=%EC%8B%A0%ED%94%8C%EB%9D%BC%EB%B9%84%EC%A0%95,"진통, 해열, 소염","성인 1회 1정, 1일 3회",과량 복용 주의
+,아스트릭스캡슐100mg,Sample제약,,,,원형,흰색,D37,B37,C37,흰색 원형 정제,https://placehold.co/128x128/png?text=%EC%95%84%EC%8A%A4%ED%8A%B8%EB%A6%AD%EC%8A%A4%EC%BA%A1%EC%8A%90100,"진통, 해열, 소염","성인 1회 1정, 1일 3회",과량 복용 주의
+,아스피린프로텍트,Sample제약,,,,원형,흰색,D8,B8,C8,흰색 원형 정제,https://placehold.co/128x128/png?text=%EC%95%84%EC%8A%A4%ED%94%BC%EB%A6%B0%ED%94%84%EB%A1%9C%ED%85%8D%ED%8A%B8,"진통, 해열, 소염","성인 1회 1정, 1일 3회",과량 복용 주의
+,아토르바정,Sample제약,,,,원형,흰색,D34,B34,C34,흰색 원형 정제,https://placehold.co/128x128/png?text=%EC%95%84%ED%86%A0%EB%A5%B4%EB%B0%94%EC%A0%95,"진통, 해열, 소염","성인 1회 1정, 1일 3회",과량 복용 주의
+,아푸르탄정150밀리그램(이르베사르탄),동아에스티(주),,,,,하양,AT,150,,필름코팅정,https://placehold.co/128x128/png?text=%EC%95%84%ED%91%B8%EB%A5%B4%ED%83%84%EC%A0%95150%EB%B0%80%EB%A6%AC,,,
+,알룬정,(주)휴온스,,,,,분홍,HS1,,,필름코팅정,https://placehold.co/128x128/png?text=%EC%95%8C%EB%A3%AC%EC%A0%95,,,
+,알마겔현탁액,Sample제약,,,,원형,흰색,D20,B20,C20,흰색 원형 정제,https://placehold.co/128x128/png?text=%EC%95%8C%EB%A7%88%EA%B2%94%ED%98%84%ED%83%81%EC%95%A1,"진통, 해열, 소염","성인 1회 1정, 1일 3회",과량 복용 주의
+,에너지톤연질캡슐,(주)알피바이오,,,,,갈색,RPENT,,,"연질캡슐제, 현탁상",https://placehold.co/128x128/png?text=%EC%97%90%EB%84%88%EC%A7%80%ED%86%A4%EC%97%B0%EC%A7%88%EC%BA%A1%EC%8A%90,,,
+,에델피스연질캡슐(디펜히드라민염산염),삼진제약(주),,,,,"청록, 투명",SJED,,,"연질캡슐제, 액상",https://placehold.co/128x128/png?text=%EC%97%90%EB%8D%B8%ED%94%BC%EC%8A%A4%EC%97%B0%EC%A7%88%EC%BA%A1%EC%8A%90%28%EB%94%94,,,
+,에스시탈정5밀리그램(에스시탈로프람옥살산염),(주)종근당,,,,,하양,CKD,ES5,,필름코팅정,https://placehold.co/128x128/png?text=%EC%97%90%EC%8A%A4%EC%8B%9C%ED%83%88%EC%A0%955%EB%B0%80%EB%A6%AC%EA%B7%B8%EB%9E%A8,,,
+,에코닉신정(클로닉신리시네이트),화일약품(주),,,,,주황,ECX,,,필름코팅정,https://placehold.co/128x128/png?text=%EC%97%90%EC%BD%94%EB%8B%89%EC%8B%A0%EC%A0%95%28%ED%81%B4%EB%A1%9C%EB%8B%89%EC%8B%A0,,,
+,엑스반정80밀리그램(발사르탄),삼진제약(주),,,,,분홍,SJ,V분할선8,,필름코팅정,https://placehold.co/128x128/png?text=%EC%97%91%EC%8A%A4%EB%B0%98%EC%A0%9580%EB%B0%80%EB%A6%AC%EA%B7%B8%EB%9E%A8,,,
+,엔에이피정(나프록센나트륨),한솔신약(주),,,,,파랑,T21,,,필름코팅정,https://placehold.co/128x128/png?text=%EC%97%94%EC%97%90%EC%9D%B4%ED%94%BC%EC%A0%95%28%EB%82%98%ED%94%84%EB%A1%9D%EC%84%BC,,,
+,오렉스캡슐,(주)휴온스생명과학,,,,,빨강,BTO ORX,,,"경질캡슐제, 산제",https://placehold.co/128x128/png?text=%EC%98%A4%EB%A0%89%EC%8A%A4%EC%BA%A1%EC%8A%90,,,
+,오로나민C드링크,Sample제약,,,,원형,흰색,D15,B15,C15,흰색 원형 정제,https://placehold.co/128x128/png?text=%EC%98%A4%EB%A1%9C%EB%82%98%EB%AF%BCC%EB%93%9C%EB%A7%81%ED%81%AC,"진통, 해열, 소염","성인 1회 1정, 1일 3회",과량 복용 주의
+,오메코프정,(주)에이프로젠바이오로직스,,,,,하양,SCP,OC,,필름코팅정,https://placehold.co/128x128/png?text=%EC%98%A4%EB%A9%94%EC%BD%94%ED%94%84%EC%A0%95,,,
+,오메콜캡슐,청계제약(주),,,,,파랑,SCP OM,,,"경질캡슐제, 산제",https://placehold.co/128x128/png?text=%EC%98%A4%EB%A9%94%EC%BD%9C%EC%BA%A1%EC%8A%90,,,
+,오메프라졸캡슐20mg,Sample제약,,,,원형,흰색,D45,B45,C45,흰색 원형 정제,https://placehold.co/128x128/png?text=%EC%98%A4%EB%A9%94%ED%94%84%EB%9D%BC%EC%A1%B8%EC%BA%A1%EC%8A%9020m,"진통, 해열, 소염","성인 1회 1정, 1일 3회",과량 복용 주의
+,올란프레서정10mg(올란자핀),한국노바티스(주),,,,,하양,SZ,10,,필름코팅정,https://placehold.co/128x128/png?text=%EC%98%AC%EB%9E%80%ED%94%84%EB%A0%88%EC%84%9C%EC%A0%9510mg,,,
+,올란프레서정2.5mg (올란자핀),한국노바티스(주),,,,,하양,SZ,2.5,,필름코팅정,https://placehold.co/128x128/png?text=%EC%98%AC%EB%9E%80%ED%94%84%EB%A0%88%EC%84%9C%EC%A0%952.5m,,,
+,올란프레서정5mg (올란자핀),한국노바티스(주),,,,,하양,SZ,5,,필름코팅정,https://placehold.co/128x128/png?text=%EC%98%AC%EB%9E%80%ED%94%84%EB%A0%88%EC%84%9C%EC%A0%955mg%20,,,
+,위장약겔포스엠,Sample제약,,,,원형,흰색,D4,B4,C4,흰색 원형 정제,https://placehold.co/128x128/png?text=%EC%9C%84%EC%9E%A5%EC%95%BD%EA%B2%94%ED%8F%AC%EC%8A%A4%EC%97%A0,"진통, 해열, 소염","성인 1회 1정, 1일 3회",과량 복용 주의
+,이젠이캡슐,경진제약(주),,,,,파랑,이젠이 이젠이,,,"경질캡슐제, 산제",https://placehold.co/128x128/png?text=%EC%9D%B4%EC%A0%A0%EC%9D%B4%EC%BA%A1%EC%8A%90,,,
+,이지에스정(방기황기탕건조엑스),주식회사 제이비케이랩,,,,,자주,INS,,,필름코팅정,https://placehold.co/128x128/png?text=%EC%9D%B4%EC%A7%80%EC%97%90%EC%8A%A4%EC%A0%95%28%EB%B0%A9%EA%B8%B0%ED%99%A9%EA%B8%B0,,,
+,이지엔6프로정,Sample제약,,,,원형,흰색,D12,B12,C12,흰색 원형 정제,https://placehold.co/128x128/png?text=%EC%9D%B4%EC%A7%80%EC%97%946%ED%94%84%EB%A1%9C%EC%A0%95,"진통, 해열, 소염","성인 1회 1정, 1일 3회",과량 복용 주의
+,이프렌에스연질캡슐(덱시부프로펜),삼진제약(주),,,,,"청록, 투명",SJ DX,,,"연질캡슐제, 액상",https://placehold.co/128x128/png?text=%EC%9D%B4%ED%94%84%EB%A0%8C%EC%97%90%EC%8A%A4%EC%97%B0%EC%A7%88%EC%BA%A1%EC%8A%90%28,,,
+,인사돌정,Sample제약,,,,원형,흰색,D14,B14,C14,흰색 원형 정제,https://placehold.co/128x128/png?text=%EC%9D%B8%EC%82%AC%EB%8F%8C%EC%A0%95,"진통, 해열, 소염","성인 1회 1정, 1일 3회",과량 복용 주의
+,인케어정(옥수수불검화정량추출물),(주)한국비엠아이,,,,,주황,BMI,,,필름코팅정,https://placehold.co/128x128/png?text=%EC%9D%B8%EC%BC%80%EC%96%B4%EC%A0%95%28%EC%98%A5%EC%88%98%EC%88%98%EB%B6%88%EA%B2%80,,,
+,자누비아정100mg,Sample제약,,,,원형,흰색,D26,B26,C26,흰색 원형 정제,https://placehold.co/128x128/png?text=%EC%9E%90%EB%88%84%EB%B9%84%EC%95%84%EC%A0%95100mg,"진통, 해열, 소염","성인 1회 1정, 1일 3회",과량 복용 주의
+,자베스카캡슐100밀리그램(미글루스타트),(주)한국얀센,,,,,하양,OGT 918 100,,,"경질캡슐제, 산제",https://placehold.co/128x128/png?text=%EC%9E%90%EB%B2%A0%EC%8A%A4%EC%B9%B4%EC%BA%A1%EC%8A%90100%EB%B0%80,,,
+,자이로토정,Sample제약,,,,원형,흰색,D41,B41,C41,흰색 원형 정제,https://placehold.co/128x128/png?text=%EC%9E%90%EC%9D%B4%EB%A1%9C%ED%86%A0%EC%A0%95,"진통, 해열, 소염","성인 1회 1정, 1일 3회",과량 복용 주의
+,잔탁정150mg,Sample제약,,,,원형,흰색,D44,B44,C44,흰색 원형 정제,https://placehold.co/128x128/png?text=%EC%9E%94%ED%83%81%EC%A0%95150mg,"진통, 해열, 소염","성인 1회 1정, 1일 3회",과량 복용 주의
+,제로민연질캡슐(디펜히드라민염산염),한솔신약(주),,,,,"청록, 투명",제로민,,,"연질캡슐제, 액상",https://placehold.co/128x128/png?text=%EC%A0%9C%EB%A1%9C%EB%AF%BC%EC%97%B0%EC%A7%88%EC%BA%A1%EC%8A%90%28%EB%94%94%ED%8E%9C,,,
+,제이에스콜드정,제이에스제약(주),,,,,분홍,CORE,,,필름코팅정,https://placehold.co/128x128/png?text=%EC%A0%9C%EC%9D%B4%EC%97%90%EC%8A%A4%EC%BD%9C%EB%93%9C%EC%A0%95,,,
+,제이코정,제이에스제약(주),,,,,하양,COΛ,분할선,,필름코팅정,https://placehold.co/128x128/png?text=%EC%A0%9C%EC%9D%B4%EC%BD%94%EC%A0%95,,,
+,제일아노민정,제일약품(주),,,,,빨강,JI ΛN,,,필름코팅정,https://placehold.co/128x128/png?text=%EC%A0%9C%EC%9D%BC%EC%95%84%EB%85%B8%EB%AF%BC%EC%A0%95,,,
+,졸뎀속붕정(졸피뎀타르타르산염),보령제약(주),,,,,하양,,,,정제,https://placehold.co/128x128/png?text=%EC%A1%B8%EB%8E%80%EC%86%8D%EB%B6%95%EC%A0%95%28%EC%A1%B8%ED%94%BC%EB%8E%80%ED%83%80,,,
+,카베딜올정,Sample제약,,,,원형,흰색,D32,B32,C32,흰색 원형 정제,https://placehold.co/128x128/png?text=%EC%B9%B4%EB%B2%A0%EB%94%9C%EC%98%AC%EC%A0%95,"진통, 해열, 소염","성인 1회 1정, 1일 3회",과량 복용 주의
+,카이로정,한솔신약(주),,,,,하양,T32,분할선,,필름코팅정,https://placehold.co/128x128/png?text=%EC%B9%B4%EC%9D%B4%EB%A1%9C%EC%A0%95,,,
+,카페그린정,청계제약(주),,,,,파랑,SCP,DL,,필름코팅정,https://placehold.co/128x128/png?text=%EC%B9%B4%ED%8E%98%EA%B7%B8%EB%A6%B0%EC%A0%95,,,
+,칸데사르정16밀리그램(칸데사르탄실렉세틸),(주)에스트라,,,,,분홍,마크분할선C16,,,나정,https://placehold.co/128x128/png?text=%EC%B9%B8%EB%8D%B0%EC%82%AC%EB%A5%B4%EC%A0%9516%EB%B0%80%EB%A6%AC%EA%B7%B8,,,
+,칸데사르정8밀리그램(칸데사르탄실렉세틸),(주)한독,,,,,분홍,마크분할선C8,,,나정,https://placehold.co/128x128/png?text=%EC%B9%B8%EB%8D%B0%EC%82%AC%EB%A5%B4%EC%A0%958%EB%B0%80%EB%A6%AC%EA%B7%B8%EB%9E%A8,,,
+,칸데사르플러스정16/12.5밀리그램,(주)한독,,,,,주황,마크분할선CS,,,나정,https://placehold.co/128x128/png?text=%EC%B9%B8%EB%8D%B0%EC%82%AC%EB%A5%B4%ED%94%8C%EB%9F%AC%EC%8A%A4%EC%A0%9516,,,
+,컨디션환,Sample제약,,,,원형,흰색,D17,B17,C17,흰색 원형 정제,https://placehold.co/128x128/png?text=%EC%BB%A8%EB%94%94%EC%85%98%ED%99%98,"진통, 해열, 소염","성인 1회 1정, 1일 3회",과량 복용 주의
+,코큐렉스연질캡슐,(주)알피바이오,,,,,검정,RPCQR,,,"연질캡슐제, 현탁상",https://placehold.co/128x128/png?text=%EC%BD%94%ED%81%90%EB%A0%89%EC%8A%A4%EC%97%B0%EC%A7%88%EC%BA%A1%EC%8A%90,,,
+,코프나캡슐,(주)휴온스생명과학,,,,,초록,BTO CNA,,,"경질캡슐제, 산제",https://placehold.co/128x128/png?text=%EC%BD%94%ED%94%84%EB%82%98%EC%BA%A1%EC%8A%90,,,
+,코프노캡슐,(주)휴온스생명과학,,,,,노랑,BTO CN,,,"경질캡슐제, 산제",https://placehold.co/128x128/png?text=%EC%BD%94%ED%94%84%EB%85%B8%EC%BA%A1%EC%8A%90,,,
+,콘로친300연질캡슐,한미약품(주),,,,,갈색,FT-C300,,,"연질캡슐제, 현탁상",https://placehold.co/128x128/png?text=%EC%BD%98%EB%A1%9C%EC%B9%9C300%EC%97%B0%EC%A7%88%EC%BA%A1%EC%8A%90,,,
+,큐시미아정,Sample제약,,,,원형,흰색,D23,B23,C23,흰색 원형 정제,https://placehold.co/128x128/png?text=%ED%81%90%EC%8B%9C%EB%AF%B8%EC%95%84%EC%A0%95,"진통, 해열, 소염","성인 1회 1정, 1일 3회",과량 복용 주의
+,크레스토정10mg,Sample제약,,,,원형,흰색,D9,B9,C9,흰색 원형 정제,https://placehold.co/128x128/png?text=%ED%81%AC%EB%A0%88%EC%8A%A4%ED%86%A0%EC%A0%9510mg,"진통, 해열, 소염","성인 1회 1정, 1일 3회",과량 복용 주의
+,키비칼츄어블정,(유)한풍제약,,,,,분홍,HF,,,추어블정(저작정),https://placehold.co/128x128/png?text=%ED%82%A4%EB%B9%84%EC%B9%BC%EC%B8%84%EC%96%B4%EB%B8%94%EC%A0%95,,,
+,타이레놀정500mg,Sample제약,,,,원형,흰색,D1,B1,C1,흰색 원형 정제,https://placehold.co/128x128/png?text=%ED%83%80%EC%9D%B4%EB%A0%88%EB%86%80%EC%A0%95500mg,"진통, 해열, 소염","성인 1회 1정, 1일 3회",과량 복용 주의
+,탁센이알서방정,Sample제약,,,,원형,흰색,D13,B13,C13,흰색 원형 정제,https://placehold.co/128x128/png?text=%ED%83%81%EC%84%BC%EC%9D%B4%EC%95%8C%EC%84%9C%EB%B0%A9%EC%A0%95,"진통, 해열, 소염","성인 1회 1정, 1일 3회",과량 복용 주의
+,텔미누보정,Sample제약,,,,원형,흰색,D39,B39,C39,흰색 원형 정제,https://placehold.co/128x128/png?text=%ED%85%94%EB%AF%B8%EB%88%84%EB%B3%B4%EC%A0%95,"진통, 해열, 소염","성인 1회 1정, 1일 3회",과량 복용 주의
+,토넥스포르테캡슐,대우제약(주),,,,,빨강,TONEX-F 마크,,,"경질캡슐제, 산제",https://placehold.co/128x128/png?text=%ED%86%A0%EB%84%A5%EC%8A%A4%ED%8F%AC%EB%A5%B4%ED%85%8C%EC%BA%A1%EC%8A%90,,,
+,토핀정25밀리그램(토피라메이트),대한뉴팜(주),,,,,하양,마크분할선N,25,,필름코팅정,https://placehold.co/128x128/png?text=%ED%86%A0%ED%95%80%EC%A0%9525%EB%B0%80%EB%A6%AC%EA%B7%B8%EB%9E%A8%28,,,
+,트리답티브정,한국엠에스디(주),,,,,하양,552,,,다층정,https://placehold.co/128x128/png?text=%ED%8A%B8%EB%A6%AC%EB%8B%B5%ED%8B%B0%EB%B8%8C%EC%A0%95,,,
+,트윈스타정,Sample제약,,,,원형,흰색,D40,B40,C40,흰색 원형 정제,https://placehold.co/128x128/png?text=%ED%8A%B8%EC%9C%88%EC%8A%A4%ED%83%80%EC%A0%95,"진통, 해열, 소염","성인 1회 1정, 1일 3회",과량 복용 주의
+,판콜A정,Sample제약,,,,원형,흰색,D50,B50,C50,흰색 원형 정제,https://placehold.co/128x128/png?text=%ED%8C%90%EC%BD%9CA%EC%A0%95,"진통, 해열, 소염","성인 1회 1정, 1일 3회",과량 복용 주의
+,판피린큐액,Sample제약,,,,원형,흰색,D3,B3,C3,흰색 원형 정제,https://placehold.co/128x128/png?text=%ED%8C%90%ED%94%BC%EB%A6%B0%ED%81%90%EC%95%A1,"진통, 해열, 소염","성인 1회 1정, 1일 3회",과량 복용 주의
+,페라트라정2.5밀리그램(레트로졸),(주)유한양행,,,,,노랑,YH,LT,,필름코팅정,https://placehold.co/128x128/png?text=%ED%8E%98%EB%9D%BC%ED%8A%B8%EB%9D%BC%EC%A0%952.5%EB%B0%80%EB%A6%AC,,,
+,포시가정10mg,Sample제약,,,,원형,흰색,D25,B25,C25,흰색 원형 정제,https://placehold.co/128x128/png?text=%ED%8F%AC%EC%8B%9C%EA%B0%80%EC%A0%9510mg,"진통, 해열, 소염","성인 1회 1정, 1일 3회",과량 복용 주의
+,포타겔현탁액,Sample제약,,,,원형,흰색,D29,B29,C29,흰색 원형 정제,https://placehold.co/128x128/png?text=%ED%8F%AC%ED%83%80%EA%B2%94%ED%98%84%ED%83%81%EC%95%A1,"진통, 해열, 소염","성인 1회 1정, 1일 3회",과량 복용 주의
+,플라빅스정75mg,Sample제약,,,,원형,흰색,D36,B36,C36,흰색 원형 정제,https://placehold.co/128x128/png?text=%ED%94%8C%EB%9D%BC%EB%B9%85%EC%8A%A4%EC%A0%9575mg,"진통, 해열, 소염","성인 1회 1정, 1일 3회",과량 복용 주의
+,행심연질캡슐(은행엽건조엑스),동화약품(주),,,,,초록,D-W GT,,,"연질캡슐제, 현탁상",https://placehold.co/128x128/png?text=%ED%96%89%EC%8B%AC%EC%97%B0%EC%A7%88%EC%BA%A1%EC%8A%90%28%EC%9D%80%ED%96%89%EC%97%BD,,,
+,헤모퀸골드캡슐,경남제약(주),,,,,갈색,KN HQ,,,"경질캡슐제, 산제",https://placehold.co/128x128/png?text=%ED%97%A4%EB%AA%A8%ED%80%B8%EA%B3%A8%EB%93%9C%EC%BA%A1%EC%8A%90,,,
+,헤파라이프연질캡슐350mg(밀크시슬열매건조엑스),(주)테라젠이텍스,,,,,갈색,ETX H-L,,,"연질캡슐제, 현탁상",https://placehold.co/128x128/png?text=%ED%97%A4%ED%8C%8C%EB%9D%BC%EC%9D%B4%ED%94%84%EC%97%B0%EC%A7%88%EC%BA%A1%EC%8A%903,,,
+,헤파피스연질캡슐,(주)에이프로젠바이오로직스,,,,,연두,CGP HP,,,"연질캡슐제, 현탁상",https://placehold.co/128x128/png?text=%ED%97%A4%ED%8C%8C%ED%94%BC%EC%8A%A4%EC%97%B0%EC%A7%88%EC%BA%A1%EC%8A%90,,,
+,훼스탈골드정,Sample제약,,,,원형,흰색,D30,B30,C30,흰색 원형 정제,https://placehold.co/128x128/png?text=%ED%9B%BC%EC%8A%A4%ED%83%88%EA%B3%A8%EB%93%9C%EC%A0%95,"진통, 해열, 소염","성인 1회 1정, 1일 3회",과량 복용 주의
+,훼스탈에이정,Sample제약,,,,원형,흰색,D31,B31,C31,흰색 원형 정제,https://placehold.co/128x128/png?text=%ED%9B%BC%EC%8A%A4%ED%83%88%EC%97%90%EC%9D%B4%EC%A0%95,"진통, 해열, 소염","성인 1회 1정, 1일 3회",과량 복용 주의
+,훼스탈플러스정,Sample제약,,,,원형,흰색,D21,B21,C21,흰색 원형 정제,https://placehold.co/128x128/png?text=%ED%9B%BC%EC%8A%A4%ED%83%88%ED%94%8C%EB%9F%AC%EC%8A%A4%EC%A0%95,"진통, 해열, 소염","성인 1회 1정, 1일 3회",과량 복용 주의
