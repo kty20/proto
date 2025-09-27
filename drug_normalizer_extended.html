@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8"/>
+  <title>의약품 CSV 정규화 도구 (연구2 · 확장 매핑)</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin: 24px; }
+    .btn { padding: 8px 14px; border: 1px solid #ccc; border-radius: 8px; cursor: pointer; }
+    .btn-primary { background:#1f6feb; color:#fff; border-color:#1f6feb; }
+    .panel { border:1px solid #e5e7eb; border-radius:12px; padding:16px; margin-top:16px; }
+    .hidden { display:none; }
+    code { background:#f6f8fa; padding:2px 6px; border-radius:6px; }
+    .muted { color:#6b7280; font-size:12px; }
+  </style>
+  <!-- Papa Parse CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+</head>
+<body>
+  <h1>의약품 CSV 정규화 도구 (연구2 확장 매핑)</h1>
+  <p class="muted">식약처 원본(여러 CSV 가능)을 표준 헤더로 정규화하고, 중복을 제거하여 <code>drugs.csv</code>로 저장합니다. (UTF-8 BOM 포함)</p>
+
+  <div class="panel">
+    <label for="csvFiles"><strong>CSV 파일 선택 (여러 개 가능)</strong></label><br/>
+    <input type="file" id="csvFiles" accept=".csv" multiple />
+    <div style="margin-top:10px; display:flex; gap:8px; flex-wrap:wrap;">
+      <button id="mergeBtn" class="btn btn-primary">여러 CSV 병합·정규화 → drugs.csv</button>
+      <button id="singleBtn" class="btn">단일 CSV 정규화 → drugs.csv</button>
+      <button id="toggle-normalizer" class="btn" type="button">매핑표 보기/숨기기</button>
+    </div>
+    <div id="normalizeLog" style="margin-top:10px;"></div>
+  </div>
+
+  <div id="normalizer-panel" class="panel hidden">
+    <h3>표준 헤더 & 매핑(후보 키)</h3>
+    <pre id="mappingView" style="white-space:pre-wrap"></pre>
+    <p class="muted">
+      필요 시 <code>candidateMap</code>에 별칭을 추가하세요. 중복/불필요 컬럼은 결과 CSV에서 자동 제거됩니다.
+    </p>
+  </div>
+
+  <script>
+    // ✅ 표준 헤더 — 연구2 확장 버전
+    const headers = [
+      'ITEM_SEQ','DRUG_NAME','COMPANY','CLASS_NAME','ETC_OTC_NAME',
+      'FORM_CODE','DRUG_SHAPE','COLOR_CLASS1','PRINT_FRONT','PRINT_BACK',
+      'MARK_CODE','CHART','IMAGE_URL','EE_DOC','UD_DOC','NB_DOC'
+    ];
+
+    // ✅ 다양한 원본 헤더 → 표준 헤더 매핑
+    const candidateMap = {
+      ITEM_SEQ:['ITEM_SEQ','item_seq','품목기준코드','품목코드','ITEMCODE','ITEM_CODE','itemcode'],
+      DRUG_NAME:['DRUG_NAME','drug_name','제품명','ITEM_NAME','PRDUCT','ITEM'],
+      COMPANY:['COMPANY','company','업체명','제조사','판매사','ENTP_NAME','entp_name','MANUFACTURER','maker','company_name'],
+      CLASS_NAME:['CLASS_NAME','class_name','분류','약효분류','효능군','class','CLASS_NO_NM','CLASS_NO_NAME'],
+      ETC_OTC_NAME:['ETC_OTC_NAME','etc_otc_name','전문/일반','etcOtc','OTC_ETC','전문일반','구분(전문/일반)','구분','OTC','ETC'],
+      FORM_CODE:['FORM_CODE','form_code','제형코드','제형','FORM_CODE_NAME','FORM_NAME','DOSAGE_FORM','form','FORM'],
+      DRUG_SHAPE:['DRUG_SHAPE','drug_shape','모양','shape','제형','모양/제형'],
+      COLOR_CLASS1:['COLOR_CLASS1','color_class1','색상','color','색상1','COLOR1','COLOR'],
+      PRINT_FRONT:['PRINT_FRONT','print_front','표기(앞)','mark_front','FRONT_MARK','앞면표기','앞표기','앞면각인','LINE_FRONT','line_front'],
+      PRINT_BACK:['PRINT_BACK','print_back','표기(뒤)','mark_back','BACK_MARK','뒷면표기','뒤표기','뒷면각인','LINE_BACK','line_back'],
+      MARK_CODE:['MARK_CODE','mark_code','식별코드','각인코드','imprint','PRINT_CODE','IDENTIFY_CODE','표기코드','IMPRINT','IMPRINT_CODE'],
+      CHART:['CHART','chart','성상','제형설명','제형_설명','외형설명','APPEARANCE','appearance','CHARACTER'],
+      IMAGE_URL:['IMAGE_URL','image_url','이미지','이미지URL','ITEM_IMAGE','item_image','IMAGE','IMG','ITEM_IMAGE01','ITEM_IMAGE1','IMG_URL'],
+      EE_DOC:['EE_DOC','ee_doc','효능효과','효능/효과','EE_DOC_DATA','ee_doc_data','EFFECT','INDICATION'],
+      UD_DOC:['UD_DOC','ud_doc','용법용량','용법/용량','UD_DOC_DATA','ud_doc_data','DOSAGE','DIRECTIONS','HOW_TO_USE'],
+      NB_DOC:['NB_DOC','nb_doc','주의사항','경고','경고/주의','사용상주의사항','NB_DOC_DATA','nb_doc_data','WARNING','PRECAUTIONS','ADVERSE','CAUTION']
+    };
+
+    // ────────────────────────────────────────────────────────────
+    // DOM 헬퍼
+    const q = (sel) => document.querySelector(sel);
+
+    // 매핑표 토글
+    q('#toggle-normalizer').addEventListener('click', () => {
+      q('#normalizer-panel').classList.toggle('hidden');
+    });
+
+    // 매핑표 표시
+    q('#mappingView').textContent = [
+      '• 표준 헤더:', JSON.stringify(headers),
+      '\n• 후보 키 매핑:', JSON.stringify(candidateMap, null, 2)
+    ].join('\n');
+
+    // ────────────────────────────────────────────────────────────
+    // 단일 CSV 정규화
+    q('#singleBtn').addEventListener('click', async () => {
+      const files = q('#csvFiles').files;
+      if (!files || files.length === 0) { alert('CSV 파일 1개를 선택하세요.'); return; }
+      if (files.length > 1) { alert('단일 변환은 1개만 선택해 주세요. (여러 개는 병합 버튼 사용)'); return; }
+
+      try {
+        const rows = await parseCSVFile(files[0]);
+        if (!rows?.length) { q('#normalizeLog').textContent = '데이터 행이 없습니다.'; return; }
+        const norm = rows.map(row => normalizeRow(row));
+        const csvText = toCSV([headers, ...norm]);
+        downloadCSV(csvText, 'drugs.csv');
+        q('#normalizeLog').innerHTML =
+          `정규화 완료: ${rows.length}건 → <b>drugs.csv</b> 다운로드`;
+      } catch (e) {
+        alert('정규화 중 오류: ' + (e?.message || e));
+      }
+    });
+
+    // ────────────────────────────────────────────────────────────
+    // 여러 CSV 병합 + 정규화 + 중복제거
+    q('#mergeBtn').addEventListener('click', async () => {
+      const files = q('#csvFiles').files;
+      if (!files || files.length === 0) { alert('CSV 파일을 선택하세요(여러 개 가능).'); return; }
+
+      try {
+        const parsedAll = await Promise.all([...files].map(f => parseCSVFile(f)));
+        const rows = parsedAll.flat(); // 모든 행 합치기
+        if (!rows?.length) { q('#normalizeLog').textContent = '데이터 행이 없습니다.'; return; }
+
+        // 정규화
+        const normalized = rows.map(row => normalizeRow(row));
+
+        // 중복제거: ITEM_SEQ 우선, 없으면 DRUG_NAME+MARK_CODE, 그래도 없으면 DRUG_NAME+FORM_CODE 보조
+        const dedupMap = new Map();
+        for (const arr of normalized) {
+          const obj = Object.fromEntries(headers.map((h,i)=>[h, arr[i] ?? '']));
+          let key = (obj.ITEM_SEQ || '').trim();
+          if (!key) {
+            const k2 = (obj.DRUG_NAME||'').trim() + '|' + (obj.MARK_CODE||'').trim();
+            key = k2 !== '|' ? k2 : ((obj.DRUG_NAME||'').trim() + '|' + (obj.FORM_CODE||'').trim());
+          }
+          if (!key) continue;            // 키가 전혀 없으면 스킵
+          if (!dedupMap.has(key)) dedupMap.set(key, obj);
+        }
+
+        // 안정적 정렬(선택): ITEM_SEQ → DRUG_NAME
+        const mergedObjs = [...dedupMap.values()].sort((a,b)=>{
+          const A=(a.ITEM_SEQ||'').localeCompare(b.ITEM_SEQ||'');
+          if (A!==0) return A;
+          return (a.DRUG_NAME||'').localeCompare(b.DRUG_NAME||'');
+        });
+
+        const merged = mergedObjs.map(o => headers.map(h => o[h] ?? ''));
+        const csvText = toCSV([headers, ...merged]);
+        downloadCSV(csvText, 'drugs.csv');
+
+        q('#normalizeLog').innerHTML =
+          `병합/정규화 완료: 원본 ${rows.length}건 → 중복 제거 후 <b>${merged.length}</b>건 → <b>drugs.csv</b> 다운로드`;
+      } catch (e) {
+        alert('병합/정규화 중 오류: ' + (e?.message || e));
+      }
+    });
+
+    // ────────────────────────────────────────────────────────────
+    // 유틸: 파일 하나 파싱 → 행 배열 반환
+    function parseCSVFile(file){
+      return new Promise((resolve, reject)=>{
+        Papa.parse(file, {
+          header: true,
+          skipEmptyLines: true,
+          encoding: 'UTF-8',
+          complete: (res)=> resolve(res.data || []),
+          error: (err)=> reject(err)
+        });
+      });
+    }
+
+    // 행 정규화: 표준 헤더 순서로 값 채우기
+    function normalizeRow(row) {
+      // 키 탐색 유틸(첫번째로 발견되는 유효값 반환)
+      const pick = (obj, keys) => {
+        for (const k of keys) {
+          if (obj[k] !== undefined && obj[k] !== null) {
+            const val = String(obj[k]).trim();
+            if (val !== '') return val;
+          }
+        }
+        return '';
+      };
+
+      const out = {};
+      for (const h of headers) {
+        const candidates = candidateMap[h] || [h];
+        let v = pick(row, candidates);
+        v = normalizeValue(h, v);
+        out[h] = v;
+      }
+      return headers.map(h => out[h]);
+    }
+
+    // 값 후처리(필요 시 규칙 추가)
+    function normalizeValue(header, value) {
+      if (!value) return '';
+      let v = String(value).trim();
+      v = v.replace(/\s+/g, ' '); // 다중 공백 축약
+
+      switch (header) {
+        case 'ETC_OTC_NAME': {
+          const low = v.toLowerCase();
+          if (low.includes('전문') || low === 'etc') v = 'ETC';
+          else if (low.includes('일반') || low === 'otc') v = 'OTC';
+          break;
+        }
+        case 'IMAGE_URL': {
+          v = v.replace(/^"+|"+$/g, '').replace(/\s/g, '');
+          break;
+        }
+        case 'MARK_CODE': {
+          v = v.replace(/^[-_]+|[-_]+$/g, '');
+          break;
+        }
+        case 'EE_DOC':
+        case 'UD_DOC':
+        case 'NB_DOC': {
+          v = v.replace(/\r\n/g, '\n').trim();
+          break;
+        }
+        case 'FORM_CODE': {
+          // '정제(필름코팅정)' 처럼 섞여 있어도 보존
+          break;
+        }
+      }
+      return v;
+    }
+
+    // CSV 직렬화
+    function toCSV(rows){
+      return rows.map(r => r.map(cell => {
+        const s = String(cell ?? '');
+        return (s.includes('"') || s.includes(',') || /\n|\r/.test(s))
+          ? '"' + s.replace(/"/g,'""') + '"'
+          : s;
+      }).join(',')).join('\n');
+    }
+
+    // 다운로드(Excel 호환을 위해 BOM 포함)
+    function downloadCSV(text, filename){
+      const blob = new Blob(["\uFEFF" + text], {type: 'text/csv;charset=utf-8;'});
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      URL.revokeObjectURL(a.href);
+      a.remove();
+    }
+  </script>
+</body>
+</html>

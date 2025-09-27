@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>의약품 정보 검색 — 프로토타입</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <style>
+    body { font-family: 'Noto Sans KR', system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
+    .tab-active { border-bottom: 2px solid #2563eb; color:#2563eb; font-weight:700; }
+    .pill { display:inline-block; padding:2px 8px; border-radius:999px; background:#eef2ff; font-size:12px; margin-right:6px; }
+    .muted { color:#64748b; }
+    .kw { background: #fff7ed; padding:0 4px; border-radius:4px; }
+    .line-clamp-3 { display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; }
+  </style>
+</head>
+<body class="bg-slate-100 min-h-screen p-4 md:p-8">
+
+  <main class="max-w-4xl mx-auto">
+    <!-- 헤더 -->
+    <div class="bg-white rounded-2xl shadow-xl ring-1 ring-black/5 p-6 md:p-8">
+      <div class="flex items-start justify-between">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center text-slate-500">●</div>
+          <h1 class="text-xl md:text-2xl font-bold">의약품 정보 검색 — 프로토타입</h1>
+        </div>
+        <div class="text-sm">
+          <a href="./index.html" class="text-slate-500 hover:text-slate-700">← 연구 안내</a>
+        </div>
+      </div>
+
+      <!-- 탭 -->
+      <div class="mt-6 border-b border-slate-200">
+        <nav class="flex gap-6 text-slate-600">
+          <button id="tab-name" class="py-3 tab-active">이름 검색</button>
+          <button id="tab-shape" class="py-3">모양 검색</button>
+        </nav>
+      </div>
+
+      <!-- 이름 검색 탭 -->
+      <section id="panel-name" class="mt-6">
+        <label class="block text-sm font-medium text-slate-700 mb-2">의약품 이름</label>
+        <div class="flex gap-2">
+          <input id="qName" type="search" placeholder="예: 타이레놀, 게보린"
+                 class="flex-1 rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <button id="btnSearchName"
+                  class="px-5 py-3 rounded-xl bg-blue-600 text-white font-medium hover:bg-blue-700">검색</button>
+        </div>
+      </section>
+
+      <!-- 모양 검색 탭 -->
+      <section id="panel-shape" class="mt-6 hidden">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+          <div>
+            <label class="block text-sm font-medium text-slate-700 mb-2">모양</label>
+            <select id="qShape" class="w-full rounded-xl border border-slate-300 px-3 py-3"></select>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-slate-700 mb-2">색상</label>
+            <select id="qColor" class="w-full rounded-xl border border-slate-300 px-3 py-3"></select>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-slate-700 mb-2">각인(앞/뒤)</label>
+            <input id="qImprint" type="text" placeholder="예: P180, 500"
+                   class="w-full rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+          </div>
+        </div>
+        <div class="mt-3">
+          <button id="btnSearchShape"
+                  class="px-5 py-3 rounded-xl bg-blue-600 text-white font-medium hover:bg-blue-700">검색</button>
+          <button id="btnResetShape" class="ml-2 px-5 py-3 rounded-xl border border-slate-300">초기화</button>
+        </div>
+      </section>
+
+      <!-- 안내 / 카운트 -->
+      <div id="helpBox" class="mt-6">
+        <div class="rounded-xl border border-slate-200 p-5 text-center text-slate-500">
+          이름 또는 모양으로 의약품을 검색해 보세요.
+        </div>
+      </div>
+      <div id="countBox" class="mt-4 hidden text-sm text-slate-500"></div>
+
+      <!-- 결과 리스트 -->
+      <section id="resultList" class="mt-4 grid gap-3"></section>
+      <div class="mt-4 text-center">
+        <button id="btnMore" class="hidden px-5 py-3 rounded-xl border border-slate-300 bg-white">더보기</button>
+      </div>
+
+      <!-- 로더 / 폴백 -->
+      <div id="loaderMsg" class="mt-6 text-sm text-slate-500">CSV 불러오는 중…</div>
+      <div id="fallback" class="mt-3 hidden">
+        <p class="text-red-600 text-sm mb-2">자동 로딩 실패 — CSV 파일을 직접 선택해 주세요.</p>
+        <input id="fileInput" type="file" accept=".csv" />
+      </div>
+
+      <!-- 푸터 링크 -->
+      <div class="mt-6 text-sm flex gap-4">
+        <a href="./drugs.csv" target="_blank" class="text-blue-700 hover:underline">현재 CSV 보기</a>
+        <a href="./drug_normalizer_extended.html" target="_blank" class="text-slate-500 hover:underline">CSV 정규화 도구 열기</a>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // 표준 헤더 (정규화 CSV 기준)
+    const STANDARD_HEADERS = [
+      'ITEM_SEQ','DRUG_NAME','COMPANY','CLASS_NAME','ETC_OTC_NAME',
+      'FORM_CODE','DRUG_SHAPE','COLOR_CLASS1','PRINT_FRONT','PRINT_BACK',
+      'MARK_CODE','CHART','IMAGE_URL','EE_DOC','UD_DOC','NB_DOC'
+    ];
+
+    // 상태
+    let HEADERS = STANDARD_HEADERS.slice();
+    let ALL = [];          // 전체 레코드
+    let VIEW = [];         // 검색 결과 레코드
+    let shown = 0;         // 현재까지 렌더된 개수
+    const STEP = 20;       // 더보기 단위
+
+    // 엘리먼트
+    const $ = sel => document.querySelector(sel);
+    const resultList = $('#resultList');
+    const loaderMsg = $('#loaderMsg');
+    const fallback  = $('#fallback');
+    const helpBox   = $('#helpBox');
+    const countBox  = $('#countBox');
+    const btnMore   = $('#btnMore');
+
+    // 탭 전환
+    $('#tab-name').addEventListener('click', () => switchTab('name'));
+    $('#tab-shape').addEventListener('click', () => switchTab('shape'));
+    function switchTab(which){
+      $('#tab-name').classList.toggle('tab-active', which==='name');
+      $('#tab-shape').classList.toggle('tab-active', which==='shape');
+      $('#panel-name').classList.toggle('hidden', which!=='name');
+      $('#panel-shape').classList.toggle('hidden', which!=='shape');
+      resultList.innerHTML = '';
+      helpBox.classList.remove('hidden');
+      countBox.classList.add('hidden');
+    }
+
+    // 이름 검색
+    $('#btnSearchName').addEventListener('click', () => {
+      const q = ($('#qName').value || '').trim().toLowerCase();
+      if (!q) { showMessage('검색어를 입력하세요.'); return; }
+      const keys = ['DRUG_NAME','COMPANY','CLASS_NAME']; // 이름 중심 + 보조
+      VIEW = ALL.filter(row => keys.some(k => String(row[k]||'').toLowerCase().includes(q)));
+      renderNewResult(q);
+    });
+    $('#qName').addEventListener('keydown', e => { if (e.key==='Enter') $('#btnSearchName').click(); });
+
+    // 모양 검색
+    $('#btnSearchShape').addEventListener('click', () => {
+      const shape = $('#qShape').value;
+      const color = $('#qColor').value;
+      const imp   = ($('#qImprint').value || '').trim().toLowerCase();
+      VIEW = ALL.filter(r => {
+        const okShape = !shape || r.DRUG_SHAPE === shape;
+        const okColor = !color || r.COLOR_CLASS1 === color;
+        const okImp   = !imp || [r.PRINT_FRONT, r.PRINT_BACK, r.MARK_CODE].some(v => String(v||'').toLowerCase().includes(imp));
+        return okShape && okColor && okImp;
+      });
+      renderNewResult(imp || shape || color);
+    });
+    $('#btnResetShape').addEventListener('click', () => {
+      $('#qShape').value = '';
+      $('#qColor').value = '';
+      $('#qImprint').value = '';
+      resultList.innerHTML = '';
+      helpBox.classList.remove('hidden');
+      countBox.classList.add('hidden');
+    });
+
+    // 결과 렌더(새 검색 시작)
+    function renderNewResult(queryLabel){
+      helpBox.classList.add('hidden');
+      resultList.innerHTML = '';
+      shown = 0;
+      updateCount(queryLabel);
+      appendMore();
+    }
+
+    // 카운트/상태
+    function updateCount(q){
+      const n = VIEW.length;
+      countBox.textContent = `검색 결과 ${n.toLocaleString()}건` + (q ? ` (쿼리: ${q})` : '');
+      countBox.classList.remove('hidden');
+    }
+
+    // 더보기
+    btnMore.addEventListener('click', appendMore);
+    function appendMore(){
+      const chunk = VIEW.slice(shown, shown + STEP);
+      chunk.forEach(renderCard);
+      shown += chunk.length;
+      btnMore.classList.toggle('hidden', shown >= VIEW.length);
+      if (VIEW.length === 0) {
+        resultList.innerHTML = `<div class="rounded-xl border border-slate-200 p-5 text-center text-slate-500">검색 결과가 없습니다.</div>`;
+      }
+    }
+
+    // 카드 렌더
+    function renderCard(row){
+      const etc = pill(row.ETC_OTC_NAME);
+      const cls = pill(row.CLASS_NAME);
+      const shape = row.DRUG_SHAPE ? ` · ${row.DRUG_SHAPE}` : '';
+      const color = row.COLOR_CLASS1 ? ` · ${row.COLOR_CLASS1}` : '';
+      const imprint = [row.PRINT_FRONT,row.PRINT_BACK].filter(Boolean).join(' / ');
+
+      const div = document.createElement('div');
+      div.className = "bg-white rounded-xl border border-slate-200 p-4 md:p-5";
+      div.innerHTML = `
+        <div class="flex gap-4">
+          <div class="w-16 h-16 rounded-lg bg-slate-100 flex items-center justify-center overflow-hidden shrink-0">
+            ${thumb(row.IMAGE_URL)}
+          </div>
+          <div class="flex-1">
+            <div class="flex flex-wrap items-center gap-2">
+              <h3 class="text-lg font-semibold">${escapeHtml(row.DRUG_NAME || '(제품명 없음)')}</h3>
+              ${etc}${cls}
+            </div>
+            <div class="mt-1 text-sm muted">
+              ${escapeHtml(row.COMPANY||'')} · ${escapeHtml(row.ITEM_SEQ||'')} ${shape}${color}
+            </div>
+            <div class="mt-1 text-sm muted">${imprint ? '각인: ' + escapeHtml(imprint) : ''}</div>
+
+            <details class="mt-2">
+              <summary class="cursor-pointer text-blue-700 hover:underline text-sm">자세히</summary>
+              <div class="mt-2 grid gap-2 text-sm">
+                ${row.CHART ? block('성상', row.CHART) : ''}
+                ${row.EE_DOC ? block('효능·효과', row.EE_DOC) : ''}
+                ${row.UD_DOC ? block('용법·용량', row.UD_DOC) : ''}
+                ${row.NB_DOC ? block('주의사항', row.NB_DOC) : ''}
+                ${row.MARK_CODE ? block('식별코드', row.MARK_CODE) : ''}
+              </div>
+            </details>
+          </div>
+        </div>
+      `;
+      resultList.appendChild(div);
+    }
+
+    function pill(txt){
+      if (!txt) return '';
+      return `<span class="pill">${escapeHtml(txt)}</span>`;
+    }
+    function thumb(url){
+      if (!url) return `<span class="text-slate-400 text-xs">NO IMG</span>`;
+      const safe = escapeAttr(url);
+      return `<img src="${safe}" alt="" class="w-full h-full object-cover">`;
+    }
+    function block(label, text){
+      const s = String(text||'');
+      const short = s.length>400 ? s.slice(0,400)+' …' : s;
+      return `
+        <div>
+          <div class="font-medium text-slate-700 mb-1">${label}</div>
+          <div class="text-slate-700 whitespace-pre-wrap">${escapeHtml(short)}</div>
+        </div>`;
+    }
+    function escapeHtml(s){ return String(s).replace(/[&<>"']/g, m=>({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[m])); }
+    function escapeAttr(s){ return String(s).replace(/"/g,'&quot;'); }
+
+    // CSV 로딩 (기본 ./drugs.csv, ?file= 지원, 실패 시 업로드 폴백)
+    const params = new URLSearchParams(location.search);
+    const csvPath = params.get('file') || './drugs.csv';
+
+    function loadCSVFromText(text){
+      Papa.parse(text, {
+        header: true,
+        skipEmptyLines: true,
+        complete: (res) => {
+          const fields = res.meta?.fields?.length ? res.meta.fields : Object.keys(res.data[0]||{});
+          const hasStandard = STANDARD_HEADERS.every(h => fields.includes(h));
+          HEADERS = hasStandard ? STANDARD_HEADERS.slice() : fields;
+
+          ALL = res.data.map(row => Object.fromEntries(HEADERS.map(h => [h, row[h] ?? ''])));
+          loaderMsg.classList.add('hidden');
+
+          // 모양/색상 옵션 채우기
+          fillSelect('#qShape', uniq(ALL.map(r=>r.DRUG_SHAPE).filter(Boolean)));
+          fillSelect('#qColor', uniq(ALL.map(r=>r.COLOR_CLASS1).filter(Boolean)));
+        }
+      });
+    }
+
+    function fillSelect(sel, items){
+      const el = $(sel);
+      el.innerHTML = `<option value="">전체</option>` + items.map(v=>`<option value="${escapeAttr(v)}">${escapeHtml(v)}</option>`).join('');
+    }
+    function uniq(arr){ return [...new Set(arr)]; }
+
+    function tryFetch(){
+      fetch(csvPath, { cache: 'no-store' })
+        .then(r => { if(!r.ok) throw new Error('CSV 로드 실패'); return r.text(); })
+        .then(loadCSVFromText)
+        .catch(()=>{ loaderMsg.textContent = '자동 로딩 실패: 서버로 열었는지/파일명을 확인하거나 CSV를 업로드하세요.'; fallback.classList.remove('hidden'); });
+    }
+
+    // 업로드 폴백
+    $('#fileInput').addEventListener('change', e => {
+      const f = e.target.files?.[0]; if (!f) return;
+      const fr = new FileReader();
+      fr.onload = ev => loadCSVFromText(ev.target.result);
+      fr.readAsText(f, 'utf-8');
+    });
+
+    // 시작
+    tryFetch();
+  </script>
+</body>
+</html>
