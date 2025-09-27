@@ -12,7 +12,7 @@
     .tab-active { border-bottom: 2px solid #2563eb; color:#2563eb; font-weight:700; }
     .pill { display:inline-block; padding:2px 8px; border-radius:999px; background:#eef2ff; font-size:12px; margin-right:6px; }
     .muted { color:#64748b; }
-    .debug { font-size:12px; color:#475569; }
+    .line-clamp-3 { display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; }
   </style>
 </head>
 <body class="bg-slate-100 min-h-screen p-4 md:p-8">
@@ -29,11 +29,8 @@
       </div>
     </div>
 
-    <!-- 진단 바 -->
-    <div id="debugBar" class="debug mt-3 hidden"></div>
-
     <!-- 탭 -->
-    <div class="mt-4 border-b border-slate-200">
+    <div class="mt-6 border-b border-slate-200">
       <nav class="flex gap-6 text-slate-600">
         <button id="tab-name" class="py-3 tab-active">이름 검색</button>
         <button id="tab-shape" class="py-3">모양 검색</button>
@@ -104,18 +101,33 @@
 </main>
 
 <script>
-/* ===== 별칭 & 정제 ===== */
+/* ========= 별칭/정제 유틸 ========= */
 const FIELD_ALIASES = {
   NAME:   ['DRUG_NAME','ITEM_NAME','제품명','drug_name','item_name','item','name','제품'],
   COMPANY:['COMPANY','MANUFACTURER','ENTP_NAME','업체명','제조사','판매사','회사','company','maker'],
   CLASS:  ['CLASS_NAME','CLASS_NO_NAME','약효분류','효능군','분류','class'],
+
   SHAPE:  ['DRUG_SHAPE','모양','shape','제형'],
   COLOR:  ['COLOR_CLASS1','색상','color','색','color1'],
   IMPRINT_FRONT: ['PRINT_FRONT','앞면표기','앞표기','front_mark','line_front','front'],
   IMPRINT_BACK:  ['PRINT_BACK','뒷면표기','뒤표기','back_mark','line_back','back'],
   MARK_CODE:     ['MARK_CODE','식별코드','각인코드','imprint','imprint_code','identify_code'],
-  IMAGE:  ['IMAGE_URL','이미지','이미지URL','IMG_URL','ITEM_IMAGE','ITEM_IMAGE01','IMAGE','IMG']
+
+  IMAGE:  ['IMAGE_URL','이미지','이미지URL','IMG_URL','ITEM_IMAGE','ITEM_IMAGE01','IMAGE','IMG'],
+
+  ETC_OTC:['ETC_OTC_NAME','전문/일반','구분(전문/일반)','OTC_ETC','OTC','ETC','전문일반','구분'],
+  FORM:   ['FORM_CODE','FORM','FORM_NAME','제형코드','제형'],
+  CHART:  ['CHART','성상','외형설명','제형설명','appearance','APPEARANCE','CHARACTER'],
+
+  // 효능/용법/주의
+  EE:     ['EE_DOC','효능','효능효과','효능/효과','INDICATION','EFFECT','EE_DOC_DATA'],
+  UD:     ['UD_DOC','용법','용법용량','용법/용량','DIRECTIONS','DOSAGE','HOW_TO_USE','UD_DOC_DATA'],
+  NB:     ['NB_DOC','주의','주의사항','경고','경고/주의','사용상주의사항','WARNING','PRECAUTIONS','CAUTION','ADVERSE','NB_DOC_DATA'],
+
+  // 성분(주성분)
+  ING:    ['INGREDIENT','INGREDIENTS','INGR_NAME','MATERIAL_NAME','주성분','성분','원료성분','성분명','제성분']
 };
+
 function resolveField(aliasList, headers){
   const H = headers.map(h => String(h ?? '').trim());
   for (const cand of aliasList){
@@ -128,16 +140,36 @@ function resolveField(aliasList, headers){
   }
   return null;
 }
+
 function sanitizeText(v){
   if (v == null) return '';
-  return String(v).replace(/^\uFEFF/,'').replace(/\u00A0/g,' ').replace(/\s+/g,' ').trim();
+  return String(v)
+    .replace(/^\uFEFF/,'')      // BOM
+    .replace(/\u00A0/g,' ')     // NBSP
+    .replace(/\s+/g,' ')        // 다중 공백
+    .trim();
 }
+
 const uniq = arr => [...new Set(arr)];
 const $ = sel => document.querySelector(sel);
+
+/* 이미지 URL 정리 */
+function cleanImageUrl(u) {
+  if (!u) return '';
+  return String(u)
+    .replace(/^"+|"+$/g, '')     // 앞뒤 큰따옴표 제거
+    .replace(/[\s\r\n\t]+/g, '') // 공백/개행 제거
+    .trim();
+}
+/* 이미지 플레이스홀더 */
+function placeholderFor(name) {
+  const label = encodeURIComponent((name||'NO IMG').slice(0,10));
+  return `https://placehold.co/128x128/png?text=${label}`;
+}
 </script>
 
 <script>
-/* ===== 상태 ===== */
+/* ========= 상태 ========= */
 let HEADERS = [];
 let ALL = [];
 let VIEW = [];
@@ -149,9 +181,8 @@ const fallback  = $('#fallback');
 const helpBox   = $('#helpBox');
 const countBox  = $('#countBox');
 const btnMore   = $('#btnMore');
-const debugBar  = $('#debugBar');
 
-/* ===== 탭 ===== */
+/* ========= 탭 ========= */
 $('#tab-name').addEventListener('click', () => switchTab('name'));
 $('#tab-shape').addEventListener('click', () => switchTab('shape'));
 function switchTab(which){
@@ -168,7 +199,7 @@ function resetView(){
   shown = 0;
 }
 
-/* ===== 이름 검색 ===== */
+/* ========= 이름 검색 ========= */
 $('#btnSearchName').addEventListener('click', () => {
   const q = sanitizeText(($('#qName').value || '')).toLowerCase();
   if (!q) { showMessage('검색어를 입력하세요.'); return; }
@@ -183,7 +214,10 @@ $('#btnSearchName').addEventListener('click', () => {
       keys.some(k => String(row[k]||'').toLowerCase().includes(q))
     );
   } else {
-    // 🔁 폴백: 어떤 키도 못 찾으면 "모든 컬럼 전체 검색"
+    VIEW = [];
+  }
+  // 0건이면 전체 컬럼 폴백
+  if (VIEW.length === 0) {
     VIEW = ALL.filter(row =>
       Object.values(row).some(v => String(v||'').toLowerCase().includes(q))
     );
@@ -196,7 +230,7 @@ $('#qName').addEventListener('keydown', e => {
 });
 $('#btnClearName').addEventListener('click', ()=>{ $('#qName').value=''; resetView(); });
 
-/* ===== 모양 검색 ===== */
+/* ========= 모양 검색 ========= */
 $('#btnSearchShape').addEventListener('click', () => {
   const shapeKey = resolveField(FIELD_ALIASES.SHAPE, HEADERS);
   const colorKey = resolveField(FIELD_ALIASES.COLOR, HEADERS);
@@ -224,7 +258,7 @@ $('#btnResetShape').addEventListener('click', () => {
   resetView();
 });
 
-/* ===== 렌더 ===== */
+/* ========= 렌더 ========= */
 function renderNewResult(queryLabel){
   helpBox.classList.add('hidden');
   resultList.innerHTML = '';
@@ -238,6 +272,7 @@ function updateCount(q){
   countBox.classList.remove('hidden');
 }
 btnMore.addEventListener('click', appendMore);
+
 function appendMore(){
   const chunk = VIEW.slice(shown, shown + STEP);
   chunk.forEach(renderCard);
@@ -247,6 +282,13 @@ function appendMore(){
     resultList.innerHTML = `<div class="rounded-xl border border-slate-200 p-5 text-center text-slate-500">검색 결과가 없습니다.</div>`;
   }
 }
+
+/* 요약 텍스트 */
+function shortText(s, n=500){
+  const t = String(s||'').trim();
+  return t.length > n ? (t.slice(0, n) + ' …') : t;
+}
+
 function renderCard(row){
   const nameKey = resolveField(FIELD_ALIASES.NAME, HEADERS);
   const compKey = resolveField(FIELD_ALIASES.COMPANY, HEADERS);
@@ -258,48 +300,88 @@ function renderCard(row){
   const mKey    = resolveField(FIELD_ALIASES.MARK_CODE, HEADERS);
   const imgKey  = resolveField(FIELD_ALIASES.IMAGE, HEADERS);
 
-  const clsPill = row[clsKey] ? pill(row[clsKey]) : '';
-  const shape = row[shapeKey] ? ` · ${escapeHtml(row[shapeKey])}` : '';
-  const color = row[colorKey] ? ` · ${escapeHtml(row[colorKey])}` : '';
+  const etcKey  = resolveField(FIELD_ALIASES.ETC_OTC, HEADERS);
+  const formKey = resolveField(FIELD_ALIASES.FORM, HEADERS);
+  const chartKey= resolveField(FIELD_ALIASES.CHART, HEADERS);
+
+  const eeKey   = resolveField(FIELD_ALIASES.EE, HEADERS);
+  const udKey   = resolveField(FIELD_ALIASES.UD, HEADERS);
+  const nbKey   = resolveField(FIELD_ALIASES.NB, HEADERS);
+  const ingKey  = resolveField(FIELD_ALIASES.ING, HEADERS);
+
+  const name = row[nameKey] || '(제품명 없음)';
+  const company = row[compKey] || '';
+  const classNm = row[clsKey] || '';
+  const etc = row[etcKey] || '';
+  const form = row[formKey] || '';
+  const shape = row[shapeKey] || '';
+  const color = row[colorKey] || '';
   const imprint = [row[fKey], row[bKey], row[mKey]].filter(Boolean).join(' / ');
+
+  const ee = row[eeKey];
+  const ud = row[udKey];
+  const nb = row[nbKey];
+  const ing = row[ingKey];
+  const chart = row[chartKey];
+
+  const rawUrl = row[imgKey];
+  const cleaned = cleanImageUrl(rawUrl);
+  const fallbackImg = placeholderFor(name);
 
   const div = document.createElement('div');
   div.className = "bg-white rounded-xl border border-slate-200 p-4 md:p-5";
   div.innerHTML = `
     <div class="flex gap-4">
-      <div class="w-16 h-16 rounded-lg bg-slate-100 flex items-center justify-center overflow-hidden shrink-0">
-        ${thumb(row[imgKey], row[nameKey])}
+      <div class="w-20 h-20 rounded-lg bg-slate-100 flex items-center justify-center overflow-hidden shrink-0">
+        <img src="${cleaned || fallbackImg}" alt="" class="w-full h-full object-contain"
+             referrerpolicy="no-referrer" crossorigin="anonymous" loading="lazy" decoding="async"
+             onerror="this.onerror=null;this.src='${fallbackImg}'">
       </div>
       <div class="flex-1">
         <div class="flex flex-wrap items-center gap-2">
-          <h3 class="text-lg font-semibold">${escapeHtml(row[nameKey] || '(제품명 없음)')}</h3>
-          ${clsPill}
+          <h3 class="text-lg font-semibold">${escapeHtml(name)}</h3>
+          ${badge(etc)} ${badge(classNm)}
         </div>
         <div class="mt-1 text-sm muted">
-          ${escapeHtml(row[compKey]||'')} ${shape}${color}
+          ${escapeHtml(company)}${form || shape || color ? ' · ' : ''}${escapeHtml(form || shape)}${form && shape ? '/' : ''}${escapeHtml(color)}
         </div>
-        <div class="mt-1 text-sm muted">${imprint ? '각인: ' + escapeHtml(imprint) : ''}</div>
+        ${imprint ? `<div class="mt-1 text-sm muted">각인: ${escapeHtml(imprint)}</div>` : ''}
+
+        <!-- 핵심 정보 블록 -->
+        ${ing ? block('주성분', shortText(ing, 250)) : ''}
+        ${chart ? block('성상/특징', shortText(chart, 250)) : ''}
+
+        <!-- 자세히 -->
+        ${(ee||ud||nb) ? `
+          <details class="mt-3">
+            <summary class="cursor-pointer text-blue-700 hover:underline text-sm">자세히 보기 (효능·효과 / 용법·용량 / 주의사항)</summary>
+            <div class="mt-2 grid gap-3 text-sm">
+              ${ee ? block('효능·효과', shortText(ee, 1200)) : ''}
+              ${ud ? block('용법·용량', shortText(ud, 1200)) : ''}
+              ${nb ? block('사용상 주의사항', shortText(nb, 1200)) : ''}
+            </div>
+          </details>
+        ` : ''}
+        ${cleaned ? `<div class="mt-2 text-xs"><a class="text-slate-500 hover:underline" href="${escapeAttr(cleaned)}" target="_blank" rel="noopener">이미지 원본 열기</a></div>` : ''}
       </div>
     </div>
   `;
   resultList.appendChild(div);
 }
-function pill(txt){ if (!txt) return ''; return `<span class="pill">${escapeHtml(txt)}</span>`; }
-function thumb(url, name){
-  let u = sanitizeText(url);
-  if (!u || u.length < 5) {
-    const label = encodeURIComponent((name||'NO IMG').slice(0,10));
-    u = `https://placehold.co/128x128/png?text=${label}`;
-  }
-  return `<img src="${escapeAttr(u)}" alt="" class="w-full h-full object-cover">`;
+
+function badge(txt){ if (!txt) return ''; return `<span class="pill">${escapeHtml(txt)}</span>`; }
+function block(label, text){
+  return `
+    <div>
+      <div class="font-medium text-slate-700 mb-1">${escapeHtml(label)}</div>
+      <div class="text-slate-700 whitespace-pre-wrap">${escapeHtml(text)}</div>
+    </div>
+  `;
 }
 function escapeHtml(s){ return String(s ?? '').replace(/[&<>"']/g, m=>({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[m])); }
 function escapeAttr(s){ return String(s ?? '').replace(/"/g,'&quot;'); }
-function showMessage(msg){
-  resultList.innerHTML = `<div class="rounded-xl border border-slate-200 p-5 text-center text-slate-500">${escapeHtml(msg)}</div>`;
-}
 
-/* ===== CSV 로딩 ===== */
+/* ========= CSV 로딩 ========= */
 const params = new URLSearchParams(location.search);
 const csvPath = params.get('file') || './drugs.csv';
 
@@ -307,41 +389,22 @@ function loadCSVFromText(text){
   Papa.parse(text, {
     header: true,
     skipEmptyLines: true,
-    dynamicTyping: false,
     complete: (res) => {
-      const rawFields = res.meta?.fields?.length ? res.meta.fields : Object.keys(res.data[0]||{});
-      HEADERS = rawFields.map(sanitizeText);
+      const fields = res.meta?.fields?.length ? res.meta.fields : Object.keys(res.data[0]||{});
+      HEADERS = fields.map(sanitizeText);
       ALL = (res.data || []).map(row => {
         const o = {};
         for (const h of HEADERS) o[h] = sanitizeText(row[h]);
         return o;
       });
+
       loaderMsg.classList.add('hidden');
 
-      // 드롭다운 옵션 채우기(없으면 그냥 전체)
+      // 모양/색상 옵션
       const shapeKey = resolveField(FIELD_ALIASES.SHAPE, HEADERS);
       const colorKey = resolveField(FIELD_ALIASES.COLOR, HEADERS);
-      const shapes = shapeKey ? uniq(ALL.map(r => r[shapeKey]).filter(Boolean)).sort() : [];
-      const colors = colorKey ? uniq(ALL.map(r => r[colorKey]).filter(Boolean)).sort() : [];
-      fillSelect('#qShape', shapes);
-      fillSelect('#qColor', colors);
-
-      // 🔎 진단 표시
-      const nameKey = resolveField(FIELD_ALIASES.NAME, HEADERS);
-      const compKey = resolveField(FIELD_ALIASES.COMPANY, HEADERS);
-      const clsKey  = resolveField(FIELD_ALIASES.CLASS, HEADERS);
-      const fKey    = resolveField(FIELD_ALIASES.IMPRINT_FRONT, HEADERS);
-      const bKey    = resolveField(FIELD_ALIASES.IMPRINT_BACK, HEADERS);
-      const mKey    = resolveField(FIELD_ALIASES.MARK_CODE, HEADERS);
-      const imgKey  = resolveField(FIELD_ALIASES.IMAGE, HEADERS);
-
-      debugBar.innerHTML =
-        `로드된 행: <b>${ALL.length.toLocaleString()}</b> · ` +
-        `키 매핑 — 제품명: <b>${escapeHtml(nameKey||'-')}</b>, 회사: <b>${escapeHtml(compKey||'-')}</b>, 분류: <b>${escapeHtml(clsKey||'-')}</b>, ` +
-        `모양: <b>${escapeHtml(shapeKey||'-')}</b>, 색상: <b>${escapeHtml(colorKey||'-')}</b>, ` +
-        `앞표기: <b>${escapeHtml(fKey||'-')}</b>, 뒤표기: <b>${escapeHtml(bKey||'-')}</b>, 식별코드: <b>${escapeHtml(mKey||'-')}</b>, ` +
-        `이미지: <b>${escapeHtml(imgKey||'-')}</b>`;
-      debugBar.classList.remove('hidden');
+      fillSelect('#qShape', shapeKey ? uniq(ALL.map(r=>r[shapeKey]).filter(Boolean)).sort() : []);
+      fillSelect('#qColor', colorKey ? uniq(ALL.map(r=>r[colorKey]).filter(Boolean)).sort() : []);
     }
   });
 }
@@ -349,11 +412,13 @@ function fillSelect(sel, items){
   const el = $(sel);
   el.innerHTML = `<option value="">전체</option>` + items.map(v=>`<option value="${escapeAttr(v)}">${escapeHtml(v)}</option>`).join('');
 }
+
+/* 로드 시도 + 폴백 업로드 */
 function tryFetch(){
   fetch(csvPath, { cache: 'no-store' })
     .then(r => { if(!r.ok) throw new Error('CSV 로드 실패'); return r.text(); })
     .then(loadCSVFromText)
-    .catch(()=>{ loaderMsg.textContent = '자동 로딩 실패: 파일명을 확인하거나 CSV를 업로드해 주세요.'; fallback.classList.remove('hidden'); });
+    .catch(()=>{ loaderMsg.textContent = '자동 로딩 실패: CSV 경로를 확인하거나 파일을 업로드하세요.'; fallback.classList.remove('hidden'); });
 }
 $('#fileInput').addEventListener('change', e => {
   const f = e.target.files?.[0]; if (!f) return;
@@ -362,7 +427,6 @@ $('#fileInput').addEventListener('change', e => {
   fr.readAsText(f, 'utf-8');
 });
 
-// 시작
 tryFetch();
 </script>
 
